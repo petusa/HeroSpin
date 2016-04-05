@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MovieDetailViewController.h
 //  HeroSpin
 //
 //  Created by Peter Nagy on 05/04/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MovieDetailViewController : UIViewController
 
 @end
-

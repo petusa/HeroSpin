@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MoviePickerViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = [[ViewController alloc] init];
+    MoviePickerViewController* rootViewController = [[MoviePickerViewController alloc] init];
+    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    navigationController.navigationBarHidden = YES;
+    self.window.rootViewController = navigationController;
     return YES;
 }
 
