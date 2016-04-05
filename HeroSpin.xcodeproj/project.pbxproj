@@ -13,6 +13,7 @@
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
 		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
+		E212E0661CB439C400526074 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212E0651CB439C400526074 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		E212E0561CB4360B00526074 /* HeroSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E05A1CB4360B00526074 /* HeroSpinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroSpinTests.m; sourceTree = "<group>"; };
 		E212E05C1CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E212E0651CB439C400526074 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				E212E0441CB4360B00526074 /* AppDelegate.m */,
 				E212E0461CB4360B00526074 /* ViewController.h */,
 				E212E0471CB4360B00526074 /* ViewController.m */,
+				E212E0651CB439C400526074 /* ViewController.xib */,
 				E212E04C1CB4360B00526074 /* Assets.xcassets */,
 				E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */,
 				E212E0511CB4360B00526074 /* Info.plist */,
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */,
+				E212E0661CB439C400526074 /* ViewController.xib in Resources */,
 				E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
