@@ -10,7 +10,6 @@
 		E212E0421CB4360B00526074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0411CB4360B00526074 /* main.m */; };
 		E212E0451CB4360B00526074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0441CB4360B00526074 /* AppDelegate.m */; };
 		E212E0481CB4360B00526074 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0471CB4360B00526074 /* ViewController.m */; };
-		E212E04B1CB4360B00526074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E0491CB4360B00526074 /* Main.storyboard */; };
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
 		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
@@ -33,7 +32,6 @@
 		E212E0441CB4360B00526074 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E212E0461CB4360B00526074 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E212E0471CB4360B00526074 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E212E04A1CB4360B00526074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E212E04C1CB4360B00526074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E212E04F1CB4360B00526074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E212E0511CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 				E212E0441CB4360B00526074 /* AppDelegate.m */,
 				E212E0461CB4360B00526074 /* ViewController.h */,
 				E212E0471CB4360B00526074 /* ViewController.m */,
-				E212E0491CB4360B00526074 /* Main.storyboard */,
 				E212E04C1CB4360B00526074 /* Assets.xcassets */,
 				E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */,
 				E212E0511CB4360B00526074 /* Info.plist */,
@@ -195,7 +192,6 @@
 			files = (
 				E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */,
 				E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */,
-				E212E04B1CB4360B00526074 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,14 +234,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E212E0491CB4360B00526074 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E212E04A1CB4360B00526074 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -404,6 +392,7 @@
 				E212E0611CB4360B00526074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E212E0621CB4360B00526074 /* Build configuration list for PBXNativeTarget "HeroSpinTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +401,7 @@
 				E212E0641CB4360B00526074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
