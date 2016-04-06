@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE757941B78E2E5E77A514F /* libPods-HeroSpin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */; };
 		E212E0421CB4360B00526074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0411CB4360B00526074 /* main.m */; };
 		E212E0451CB4360B00526074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0441CB4360B00526074 /* AppDelegate.m */; };
 		E212E0481CB4360B00526074 /* MoviePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0471CB4360B00526074 /* MoviePickerViewController.m */; };
@@ -18,6 +19,7 @@
 		E212E06B1CB440AE00526074 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212E0691CB440AE00526074 /* MovieDetailViewController.xib */; };
 		E212E06F1CB454C300526074 /* HeroSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E06D1CB454C300526074 /* HeroSelectorViewController.m */; };
 		E212E0701CB454C300526074 /* HeroSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212E06E1CB454C300526074 /* HeroSelectorViewController.xib */; };
+		E212E0751CB531D700526074 /* AppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0741CB531D700526074 /* AppAssembly.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E429FB3A9B0043DDB6957FE /* Pods-HeroSpin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpin/Pods-HeroSpin.debug.xcconfig"; sourceTree = "<group>"; };
+		359F28C46F935A739BF23144 /* Pods-HeroSpin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpin.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpin/Pods-HeroSpin.release.xcconfig"; sourceTree = "<group>"; };
 		E212E03D1CB4360B00526074 /* HeroSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E0411CB4360B00526074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E212E0431CB4360B00526074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +54,9 @@
 		E212E06C1CB454C300526074 /* HeroSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSelectorViewController.h; sourceTree = "<group>"; };
 		E212E06D1CB454C300526074 /* HeroSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSelectorViewController.m; sourceTree = "<group>"; };
 		E212E06E1CB454C300526074 /* HeroSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroSelectorViewController.xib; sourceTree = "<group>"; };
+		E212E0731CB531D700526074 /* AppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAssembly.h; sourceTree = "<group>"; };
+		E212E0741CB531D700526074 /* AppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAssembly.m; sourceTree = "<group>"; };
+		E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE757941B78E2E5E77A514F /* libPods-HeroSpin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB6D381C0A350D7D6564E8F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2E3E58B721CA49EC0C62326 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E429FB3A9B0043DDB6957FE /* Pods-HeroSpin.debug.xcconfig */,
+				359F28C46F935A739BF23144 /* Pods-HeroSpin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E212E0341CB4360B00526074 = {
 			isa = PBXGroup;
 			children = (
 				E212E03F1CB4360B00526074 /* HeroSpin */,
 				E212E0591CB4360B00526074 /* HeroSpinTests */,
 				E212E03E1CB4360B00526074 /* Products */,
+				D2E3E58B721CA49EC0C62326 /* Pods */,
+				AB6D381C0A350D7D6564E8F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,17 +118,19 @@
 		E212E03F1CB4360B00526074 /* HeroSpin */ = {
 			isa = PBXGroup;
 			children = (
-				E212E0671CB440AE00526074 /* MovieDetailViewController.h */,
-				E212E0681CB440AE00526074 /* MovieDetailViewController.m */,
-				E212E0691CB440AE00526074 /* MovieDetailViewController.xib */,
+				E212E0431CB4360B00526074 /* AppDelegate.h */,
+				E212E0441CB4360B00526074 /* AppDelegate.m */,
+				E212E0731CB531D700526074 /* AppAssembly.h */,
+				E212E0741CB531D700526074 /* AppAssembly.m */,
 				E212E0461CB4360B00526074 /* MoviePickerViewController.h */,
 				E212E0471CB4360B00526074 /* MoviePickerViewController.m */,
 				E212E0651CB439C400526074 /* MoviePickerViewController.xib */,
+				E212E0671CB440AE00526074 /* MovieDetailViewController.h */,
+				E212E0681CB440AE00526074 /* MovieDetailViewController.m */,
+				E212E0691CB440AE00526074 /* MovieDetailViewController.xib */,
 				E212E06C1CB454C300526074 /* HeroSelectorViewController.h */,
 				E212E06D1CB454C300526074 /* HeroSelectorViewController.m */,
 				E212E06E1CB454C300526074 /* HeroSelectorViewController.xib */,
-				E212E0431CB4360B00526074 /* AppDelegate.h */,
-				E212E0441CB4360B00526074 /* AppDelegate.m */,
 				E212E04C1CB4360B00526074 /* Assets.xcassets */,
 				E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */,
 				E212E0511CB4360B00526074 /* Info.plist */,
@@ -134,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E212E05F1CB4360B00526074 /* Build configuration list for PBXNativeTarget "HeroSpin" */;
 			buildPhases = (
+				7C5A9647F345C193E7377F21 /* Check Pods Manifest.lock */,
 				E212E0391CB4360B00526074 /* Sources */,
 				E212E03A1CB4360B00526074 /* Frameworks */,
 				E212E03B1CB4360B00526074 /* Resources */,
+				FC7FA2A77509BE1A9C2F5FC9 /* Embed Pods Frameworks */,
+				6FB68427B286952CF061BF2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,12 +258,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6FB68427B286952CF061BF2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroSpin/Pods-HeroSpin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C5A9647F345C193E7377F21 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7FA2A77509BE1A9C2F5FC9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroSpin/Pods-HeroSpin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E212E0391CB4360B00526074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E212E06A1CB440AE00526074 /* MovieDetailViewController.m in Sources */,
+				E212E0751CB531D700526074 /* AppAssembly.m in Sources */,
 				E212E0481CB4360B00526074 /* MoviePickerViewController.m in Sources */,
 				E212E0451CB4360B00526074 /* AppDelegate.m in Sources */,
 				E212E06F1CB454C300526074 /* HeroSelectorViewController.m in Sources */,
@@ -353,10 +434,12 @@
 		};
 		E212E0601CB4360B00526074 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E429FB3A9B0043DDB6957FE /* Pods-HeroSpin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroSpin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = petusa.github.io.HeroSpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -364,10 +447,12 @@
 		};
 		E212E0611CB4360B00526074 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 359F28C46F935A739BF23144 /* Pods-HeroSpin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroSpin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = petusa.github.io.HeroSpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

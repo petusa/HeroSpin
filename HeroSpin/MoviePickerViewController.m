@@ -7,14 +7,25 @@
 //
 
 #import "MoviePickerViewController.h"
-#import "MovieDetailViewController.h"
-#import "HeroSelectorViewController.h"
+#import "AppAssembly.h"
 
 @interface MoviePickerViewController ()
-
+{
+    AppAssembly *_assembly;
+}
 @end
 
 @implementation MoviePickerViewController
+
+- (instancetype)initWithAssembly:(AppAssembly *)assembly
+{
+    self = [super init];
+    if (self)
+    {
+        _assembly = assembly;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,15 +38,15 @@
 }
 
 - (IBAction)pickMovie:(id)selector {
-    MovieDetailViewController *nextViewController = [[MovieDetailViewController alloc] init];
-    // and push it onto the 'navigation stack'
-    [self.navigationController pushViewController:nextViewController animated:YES];
+    // TODO make selection logic here
+    
+    // present movie detail, push it onto the 'navigation stack'
+    [self.navigationController pushViewController:[_assembly movieDetailViewController] animated:YES];
 }
 
 - (IBAction)selectHero:(id)selector {
-    HeroSelectorViewController *nextViewController = [[HeroSelectorViewController alloc] init];
-    // and push it onto the 'navigation stack'
-    [self.navigationController pushViewController:nextViewController animated:YES];
+    // present hero selection screen, push it onto the 'navigation stack'
+    [self.navigationController pushViewController:[_assembly heroSelectorViewController] animated:YES];
 }
 
 @end

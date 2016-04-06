@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class AppAssembly;
+
 @interface MoviePickerViewController : UIViewController
+
+- (instancetype)initWithAssembly:(AppAssembly *)assembly;
 
 @end
 
