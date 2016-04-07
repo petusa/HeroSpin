@@ -23,4 +23,6 @@
 
 - (UIViewController*)heroSelectorViewController;
 
+- (id<ContentService>)contentService;
+
 @end

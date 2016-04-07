@@ -7,12 +7,25 @@
 //
 
 #import "HeroSelectorViewController.h"
+#import "ContentService.h"
 
 @interface HeroSelectorViewController ()
-
+{
+    id<ContentService> _contentService;
+}
 @end
 
 @implementation HeroSelectorViewController
+
+- (instancetype)initWithContentService:(id<ContentService>)contentService
+{
+    self = [super init];
+    if (self)
+    {
+        _contentService = contentService;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

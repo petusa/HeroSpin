@@ -8,10 +8,12 @@
 
 #import "MoviePickerViewController.h"
 #import "AppAssembly.h"
+#import "ContentService.h"
 
 @interface MoviePickerViewController ()
 {
     AppAssembly *_assembly;
+    id<ContentService> _contentService;
 }
 @end
 
@@ -23,6 +25,7 @@
     if (self)
     {
         _assembly = assembly;
+        _contentService = assembly.contentService;
     }
     return self;
 }
