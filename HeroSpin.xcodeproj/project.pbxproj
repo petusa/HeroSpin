@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0EE757941B78E2E5E77A514F /* libPods-HeroSpin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */; };
+		E2128AD81CB676FE00564C78 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128ACF1CB676FE00564C78 /* MovieDetailViewController.m */; };
+		E2128AD91CB676FE00564C78 /* HeroSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2128AD01CB676FE00564C78 /* HeroSelectorViewController.xib */; };
+		E2128ADA1CB676FE00564C78 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2128AD21CB676FE00564C78 /* MovieDetailViewController.xib */; };
+		E2128ADB1CB676FE00564C78 /* MoviePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AD41CB676FE00564C78 /* MoviePickerViewController.m */; };
+		E2128ADD1CB676FE00564C78 /* HeroSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AD71CB676FE00564C78 /* HeroSelectorViewController.m */; };
 		E212E0421CB4360B00526074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0411CB4360B00526074 /* main.m */; };
 		E212E0451CB4360B00526074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0441CB4360B00526074 /* AppDelegate.m */; };
-		E212E0481CB4360B00526074 /* MoviePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0471CB4360B00526074 /* MoviePickerViewController.m */; };
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
 		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
-		E212E0661CB439C400526074 /* MoviePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212E0651CB439C400526074 /* MoviePickerViewController.xib */; };
-		E212E06A1CB440AE00526074 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0681CB440AE00526074 /* MovieDetailViewController.m */; };
-		E212E06B1CB440AE00526074 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212E0691CB440AE00526074 /* MovieDetailViewController.xib */; };
-		E212E06F1CB454C300526074 /* HeroSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E06D1CB454C300526074 /* HeroSelectorViewController.m */; };
-		E212E0701CB454C300526074 /* HeroSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212E06E1CB454C300526074 /* HeroSelectorViewController.xib */; };
 		E212E0751CB531D700526074 /* AppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0741CB531D700526074 /* AppAssembly.m */; };
+		E212E07C1CB57BA500526074 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E212E07B1CB57BA500526074 /* heroes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,27 +35,28 @@
 /* Begin PBXFileReference section */
 		0E429FB3A9B0043DDB6957FE /* Pods-HeroSpin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpin/Pods-HeroSpin.debug.xcconfig"; sourceTree = "<group>"; };
 		359F28C46F935A739BF23144 /* Pods-HeroSpin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpin.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpin/Pods-HeroSpin.release.xcconfig"; sourceTree = "<group>"; };
+		E2128ACF1CB676FE00564C78 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
+		E2128AD01CB676FE00564C78 /* HeroSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroSelectorViewController.xib; sourceTree = "<group>"; };
+		E2128AD11CB676FE00564C78 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
+		E2128AD21CB676FE00564C78 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		E2128AD31CB676FE00564C78 /* MoviePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePickerViewController.h; sourceTree = "<group>"; };
+		E2128AD41CB676FE00564C78 /* MoviePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePickerViewController.m; sourceTree = "<group>"; };
+		E2128AD51CB676FE00564C78 /* MoviePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePickerViewController.xib; sourceTree = "<group>"; };
+		E2128AD61CB676FE00564C78 /* HeroSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSelectorViewController.h; sourceTree = "<group>"; };
+		E2128AD71CB676FE00564C78 /* HeroSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSelectorViewController.m; sourceTree = "<group>"; };
 		E212E03D1CB4360B00526074 /* HeroSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E0411CB4360B00526074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E212E0431CB4360B00526074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E212E0441CB4360B00526074 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E212E0461CB4360B00526074 /* MoviePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviePickerViewController.h; sourceTree = "<group>"; };
-		E212E0471CB4360B00526074 /* MoviePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviePickerViewController.m; sourceTree = "<group>"; };
 		E212E04C1CB4360B00526074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E212E04F1CB4360B00526074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E212E0511CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E212E0561CB4360B00526074 /* HeroSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E05A1CB4360B00526074 /* HeroSpinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroSpinTests.m; sourceTree = "<group>"; };
 		E212E05C1CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E212E0651CB439C400526074 /* MoviePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePickerViewController.xib; sourceTree = "<group>"; };
-		E212E0671CB440AE00526074 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
-		E212E0681CB440AE00526074 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
-		E212E0691CB440AE00526074 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
-		E212E06C1CB454C300526074 /* HeroSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSelectorViewController.h; sourceTree = "<group>"; };
-		E212E06D1CB454C300526074 /* HeroSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSelectorViewController.m; sourceTree = "<group>"; };
-		E212E06E1CB454C300526074 /* HeroSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroSelectorViewController.xib; sourceTree = "<group>"; };
 		E212E0731CB531D700526074 /* AppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAssembly.h; sourceTree = "<group>"; };
 		E212E0741CB531D700526074 /* AppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAssembly.m; sourceTree = "<group>"; };
+		E212E07B1CB57BA500526074 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +96,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E2128ACE1CB6754300564C78 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2128AD31CB676FE00564C78 /* MoviePickerViewController.h */,
+				E2128AD41CB676FE00564C78 /* MoviePickerViewController.m */,
+				E2128AD51CB676FE00564C78 /* MoviePickerViewController.xib */,
+				E2128AD11CB676FE00564C78 /* MovieDetailViewController.h */,
+				E2128ACF1CB676FE00564C78 /* MovieDetailViewController.m */,
+				E2128AD21CB676FE00564C78 /* MovieDetailViewController.xib */,
+				E2128AD61CB676FE00564C78 /* HeroSelectorViewController.h */,
+				E2128AD71CB676FE00564C78 /* HeroSelectorViewController.m */,
+				E2128AD01CB676FE00564C78 /* HeroSelectorViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E212E0341CB4360B00526074 = {
 			isa = PBXGroup;
 			children = (
@@ -122,15 +139,8 @@
 				E212E0441CB4360B00526074 /* AppDelegate.m */,
 				E212E0731CB531D700526074 /* AppAssembly.h */,
 				E212E0741CB531D700526074 /* AppAssembly.m */,
-				E212E0461CB4360B00526074 /* MoviePickerViewController.h */,
-				E212E0471CB4360B00526074 /* MoviePickerViewController.m */,
-				E212E0651CB439C400526074 /* MoviePickerViewController.xib */,
-				E212E0671CB440AE00526074 /* MovieDetailViewController.h */,
-				E212E0681CB440AE00526074 /* MovieDetailViewController.m */,
-				E212E0691CB440AE00526074 /* MovieDetailViewController.xib */,
-				E212E06C1CB454C300526074 /* HeroSelectorViewController.h */,
-				E212E06D1CB454C300526074 /* HeroSelectorViewController.m */,
-				E212E06E1CB454C300526074 /* HeroSelectorViewController.xib */,
+				E2128ACE1CB6754300564C78 /* Controllers */,
+				E212E07A1CB57B7F00526074 /* Resources */,
 				E212E04C1CB4360B00526074 /* Assets.xcassets */,
 				E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */,
 				E212E0511CB4360B00526074 /* Info.plist */,
@@ -154,6 +164,14 @@
 				E212E05C1CB4360B00526074 /* Info.plist */,
 			);
 			path = HeroSpinTests;
+			sourceTree = "<group>";
+		};
+		E212E07A1CB57B7F00526074 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E212E07B1CB57BA500526074 /* heroes.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,11 +259,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E212E06B1CB440AE00526074 /* MovieDetailViewController.xib in Resources */,
+				E2128ADA1CB676FE00564C78 /* MovieDetailViewController.xib in Resources */,
 				E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */,
-				E212E0701CB454C300526074 /* HeroSelectorViewController.xib in Resources */,
-				E212E0661CB439C400526074 /* MoviePickerViewController.xib in Resources */,
+				E2128AD91CB676FE00564C78 /* HeroSelectorViewController.xib in Resources */,
+				E212E07C1CB57BA500526074 /* heroes.json in Resources */,
 				E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */,
+				E2128ADC1CB676FE00564C78 /* MoviePickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E212E06A1CB440AE00526074 /* MovieDetailViewController.m in Sources */,
+				E2128ADB1CB676FE00564C78 /* MoviePickerViewController.m in Sources */,
+				E2128ADD1CB676FE00564C78 /* HeroSelectorViewController.m in Sources */,
+				E2128AD81CB676FE00564C78 /* MovieDetailViewController.m in Sources */,
 				E212E0751CB531D700526074 /* AppAssembly.m in Sources */,
-				E212E0481CB4360B00526074 /* MoviePickerViewController.m in Sources */,
 				E212E0451CB4360B00526074 /* AppDelegate.m in Sources */,
-				E212E06F1CB454C300526074 /* HeroSelectorViewController.m in Sources */,
 				E212E0421CB4360B00526074 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
