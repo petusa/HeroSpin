@@ -14,23 +14,30 @@
 #pragma mark - Class Methods
 //-------------------------------------------------------------------------------------------
 
-+ (Hero*) withName:(NSString*)name image:(NSString*)image
++ (Hero*) withName:(NSString*)name imagePath:(NSString*)path creator:(NSString*)creator type:(NSString*)type
 {
-    return [[Hero alloc] initWithName:name image:image];
+    return [[Hero alloc] initWithName:name imagePath:path creator:creator type:type];
 }
 
 //-------------------------------------------------------------------------------------------
 #pragma mark - Initialization & Destruction
 //-------------------------------------------------------------------------------------------
 
-- (id) initWithName:(NSString*)name image:(NSString*)image
+- (id) initWithName:(NSString*)name imagePath:(NSString*)path creator:(NSString*)creator type:(NSString*)type
 {
     self = [super init];
     if (self) {
         _name = [name copy];
-        _image = [image copy];
+        _imagePath = [path copy];
+        _creator = [creator copy];
+        _type = [type copy];
     }
     return self;
+}
+
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"Hero: name=%@, image path=%@, type=%@", _name, _imagePath, _type];
 }
 
 @end

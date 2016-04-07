@@ -11,10 +11,14 @@
 @interface Hero : NSObject
 
 @property (nonatomic, strong, readonly) NSString *name;
-@property (nonatomic, strong, readonly) NSString *image;
+@property (nonatomic, strong, readonly) NSString *imagePath;
+@property (nonatomic, strong, readonly) NSString *creator;
+@property (nonatomic, strong, readonly) NSString *type;
 
-+ (id) withName:(NSString*)name image:(NSString*)image;
++ (id) withName:(NSString*)name imagePath:(NSString*)path creator:(NSString*)creator type:(NSString*)type;
 
-- (id) initWithName:(NSString*)name image:(NSString*)image;
+- (id) initWithName:(NSString*)name imagePath:(NSString*)path creator:(NSString*)creator type:(NSString*)type;
+
+- (NSString*)description;
 
 @end

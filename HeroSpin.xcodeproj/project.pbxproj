@@ -12,14 +12,20 @@
 		E2128AD91CB676FE00564C78 /* HeroSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2128AD01CB676FE00564C78 /* HeroSelectorViewController.xib */; };
 		E2128ADA1CB676FE00564C78 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2128AD21CB676FE00564C78 /* MovieDetailViewController.xib */; };
 		E2128ADB1CB676FE00564C78 /* MoviePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AD41CB676FE00564C78 /* MoviePickerViewController.m */; };
+		E2128ADC1CB676FE00564C78 /* MoviePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2128AD51CB676FE00564C78 /* MoviePickerViewController.xib */; };
 		E2128ADD1CB676FE00564C78 /* HeroSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AD71CB676FE00564C78 /* HeroSelectorViewController.m */; };
+		E2128AE11CB67A1F00564C78 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AE01CB67A1F00564C78 /* Movie.m */; };
+		E2128AE41CB67A3600564C78 /* MovieDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AE31CB67A3600564C78 /* MovieDetail.m */; };
+		E2128AE71CB67A4500564C78 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AE61CB67A4500564C78 /* Hero.m */; };
+		E2128AEC1CB69AEA00564C78 /* ContentServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AEB1CB69AEA00564C78 /* ContentServiceImpl.m */; };
+		E2128B471CB6DF9900564C78 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = E2128B451CB6DF9900564C78 /* Images */; };
+		E2128B481CB6DF9900564C78 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E2128B461CB6DF9900564C78 /* heroes.json */; };
 		E212E0421CB4360B00526074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0411CB4360B00526074 /* main.m */; };
 		E212E0451CB4360B00526074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0441CB4360B00526074 /* AppDelegate.m */; };
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
 		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
 		E212E0751CB531D700526074 /* AppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0741CB531D700526074 /* AppAssembly.m */; };
-		E212E07C1CB57BA500526074 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E212E07B1CB57BA500526074 /* heroes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,17 @@
 		E2128AD51CB676FE00564C78 /* MoviePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePickerViewController.xib; sourceTree = "<group>"; };
 		E2128AD61CB676FE00564C78 /* HeroSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSelectorViewController.h; sourceTree = "<group>"; };
 		E2128AD71CB676FE00564C78 /* HeroSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSelectorViewController.m; sourceTree = "<group>"; };
+		E2128ADF1CB67A1F00564C78 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		E2128AE01CB67A1F00564C78 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		E2128AE21CB67A3600564C78 /* MovieDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetail.h; sourceTree = "<group>"; };
+		E2128AE31CB67A3600564C78 /* MovieDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetail.m; sourceTree = "<group>"; };
+		E2128AE51CB67A4500564C78 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		E2128AE61CB67A4500564C78 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		E2128AE91CB69AEA00564C78 /* ContentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentService.h; sourceTree = "<group>"; };
+		E2128AEA1CB69AEA00564C78 /* ContentServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentServiceImpl.h; sourceTree = "<group>"; };
+		E2128AEB1CB69AEA00564C78 /* ContentServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentServiceImpl.m; sourceTree = "<group>"; };
+		E2128B451CB6DF9900564C78 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		E2128B461CB6DF9900564C78 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		E212E03D1CB4360B00526074 /* HeroSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E0411CB4360B00526074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E212E0431CB4360B00526074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,7 +73,6 @@
 		E212E05C1CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E212E0731CB531D700526074 /* AppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAssembly.h; sourceTree = "<group>"; };
 		E212E0741CB531D700526074 /* AppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAssembly.m; sourceTree = "<group>"; };
-		E212E07B1CB57BA500526074 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +128,38 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		E2128ADE1CB67A0200564C78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2128ADF1CB67A1F00564C78 /* Movie.h */,
+				E2128AE01CB67A1F00564C78 /* Movie.m */,
+				E2128AE21CB67A3600564C78 /* MovieDetail.h */,
+				E2128AE31CB67A3600564C78 /* MovieDetail.m */,
+				E2128AE51CB67A4500564C78 /* Hero.h */,
+				E2128AE61CB67A4500564C78 /* Hero.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E2128AE81CB69AA600564C78 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E2128AE91CB69AEA00564C78 /* ContentService.h */,
+				E2128AEA1CB69AEA00564C78 /* ContentServiceImpl.h */,
+				E2128AEB1CB69AEA00564C78 /* ContentServiceImpl.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E2128B3C1CB6D5A000564C78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2128B451CB6DF9900564C78 /* Images */,
+				E2128B461CB6DF9900564C78 /* heroes.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E212E0341CB4360B00526074 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +188,9 @@
 				E212E0731CB531D700526074 /* AppAssembly.h */,
 				E212E0741CB531D700526074 /* AppAssembly.m */,
 				E2128ACE1CB6754300564C78 /* Controllers */,
-				E212E07A1CB57B7F00526074 /* Resources */,
+				E2128ADE1CB67A0200564C78 /* Models */,
+				E2128AE81CB69AA600564C78 /* Services */,
+				E2128B3C1CB6D5A000564C78 /* Resources */,
 				E212E04C1CB4360B00526074 /* Assets.xcassets */,
 				E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */,
 				E212E0511CB4360B00526074 /* Info.plist */,
@@ -164,14 +214,6 @@
 				E212E05C1CB4360B00526074 /* Info.plist */,
 			);
 			path = HeroSpinTests;
-			sourceTree = "<group>";
-		};
-		E212E07A1CB57B7F00526074 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E212E07B1CB57BA500526074 /* heroes.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,11 +301,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2128B481CB6DF9900564C78 /* heroes.json in Resources */,
 				E2128ADA1CB676FE00564C78 /* MovieDetailViewController.xib in Resources */,
 				E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */,
 				E2128AD91CB676FE00564C78 /* HeroSelectorViewController.xib in Resources */,
-				E212E07C1CB57BA500526074 /* heroes.json in Resources */,
 				E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */,
+				E2128B471CB6DF9900564C78 /* Images in Resources */,
 				E2128ADC1CB676FE00564C78 /* MoviePickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +375,10 @@
 			files = (
 				E2128ADB1CB676FE00564C78 /* MoviePickerViewController.m in Sources */,
 				E2128ADD1CB676FE00564C78 /* HeroSelectorViewController.m in Sources */,
+				E2128AE11CB67A1F00564C78 /* Movie.m in Sources */,
+				E2128AEC1CB69AEA00564C78 /* ContentServiceImpl.m in Sources */,
+				E2128AE41CB67A3600564C78 /* MovieDetail.m in Sources */,
+				E2128AE71CB67A4500564C78 /* Hero.m in Sources */,
 				E2128AD81CB676FE00564C78 /* MovieDetailViewController.m in Sources */,
 				E212E0751CB531D700526074 /* AppAssembly.m in Sources */,
 				E212E0451CB4360B00526074 /* AppDelegate.m in Sources */,

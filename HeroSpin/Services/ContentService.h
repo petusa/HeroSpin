@@ -16,7 +16,7 @@ typedef void(^FetchMoviesErrorBlock)(NSString *message);
 
 @protocol ContentService <NSObject>
 
-- (void)fetchHeroes;
+- (NSArray*)fetchHeroes;
 
 - (void)fetchMoviesFor:(Hero*)hero
              onSuccess:(FetchMoviesReceivedBlock)successBlock
