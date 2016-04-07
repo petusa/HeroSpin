@@ -8,6 +8,10 @@
 
 #import <XCTest/XCTest.h>
 
+#import "Hero.h"
+#import "Movie.h"
+#import "MovieDetail.h"
+
 @interface HeroSpinTests : XCTestCase
 
 @end
@@ -24,9 +28,21 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testModels {
+    // testing Hero creation
+    Hero* Batman = [Hero withName:@"Batman" image:@"batman.jpg"];
+    XCTAssert([Batman.name isEqualToString:@"Batman"], @"Could not create Hero instance with static class method.");
+    
+    // testing Movie class, with movie type converters
+    Movie* BatmanReturnsMovie = [Movie movieWithData:@{ (@"Title"):@"Batman Returns", (@"Type"):@"movie" }];
+    XCTAssert([BatmanReturnsMovie.Title isEqualToString:@"Batman Returns"], @"Could not create Movie instance with static class method.");
+    XCTAssert(BatmanReturnsMovie.Type == movie, @"Type conversion string => movie type does not operate proeprly");
+    XCTAssert([[Movie movieTypeNameFrom:movie] isEqualToString:@"movie"], @"Type conversion movie type => string does not operate proeprly");
+   
+    // tetsing MovieDetail child class instantiation
+    MovieDetail* BatmanReturnsMovieWithDetail = [MovieDetail movieDetailWithData:@{ (@"Title"):@"Batman Returns", (@"Type"):@"movie", (@"Genre"):@"Action"}];
+    XCTAssert([BatmanReturnsMovieWithDetail.Title isEqualToString:@"Batman Returns"], @"Could not create MovieDetail instance with static class method and calling super.");
+    XCTAssert([BatmanReturnsMovieWithDetail.Genre isEqualToString:@"Action"], @"Could not create MovieDetail instance with static class method and calling super.");
 }
 
 - (void)testPerformanceExample {
