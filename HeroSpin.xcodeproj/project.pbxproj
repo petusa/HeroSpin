@@ -20,12 +20,12 @@
 		E2128AEC1CB69AEA00564C78 /* ContentServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128AEB1CB69AEA00564C78 /* ContentServiceImpl.m */; };
 		E2128B471CB6DF9900564C78 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = E2128B451CB6DF9900564C78 /* Images */; };
 		E2128B481CB6DF9900564C78 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E2128B461CB6DF9900564C78 /* heroes.json */; };
+		E2128B531CB7D69C00564C78 /* AppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128B521CB7D69C00564C78 /* AppAssembly.m */; };
 		E212E0421CB4360B00526074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0411CB4360B00526074 /* main.m */; };
 		E212E0451CB4360B00526074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0441CB4360B00526074 /* AppDelegate.m */; };
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
 		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
-		E212E0751CB531D700526074 /* AppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0741CB531D700526074 /* AppAssembly.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +61,8 @@
 		E2128AEB1CB69AEA00564C78 /* ContentServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentServiceImpl.m; sourceTree = "<group>"; };
 		E2128B451CB6DF9900564C78 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		E2128B461CB6DF9900564C78 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
+		E2128B511CB7D69C00564C78 /* AppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAssembly.h; sourceTree = "<group>"; };
+		E2128B521CB7D69C00564C78 /* AppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAssembly.m; sourceTree = "<group>"; };
 		E212E03D1CB4360B00526074 /* HeroSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E0411CB4360B00526074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E212E0431CB4360B00526074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,8 +73,6 @@
 		E212E0561CB4360B00526074 /* HeroSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E05A1CB4360B00526074 /* HeroSpinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroSpinTests.m; sourceTree = "<group>"; };
 		E212E05C1CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E212E0731CB531D700526074 /* AppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAssembly.h; sourceTree = "<group>"; };
-		E212E0741CB531D700526074 /* AppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAssembly.m; sourceTree = "<group>"; };
 		E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,6 +160,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E2128B541CB7D6B900564C78 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E2128B511CB7D69C00564C78 /* AppAssembly.h */,
+				E2128B521CB7D69C00564C78 /* AppAssembly.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		E212E0341CB4360B00526074 = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +194,7 @@
 			children = (
 				E212E0431CB4360B00526074 /* AppDelegate.h */,
 				E212E0441CB4360B00526074 /* AppDelegate.m */,
-				E212E0731CB531D700526074 /* AppAssembly.h */,
-				E212E0741CB531D700526074 /* AppAssembly.m */,
+				E2128B541CB7D6B900564C78 /* Configuration */,
 				E2128ACE1CB6754300564C78 /* Controllers */,
 				E2128ADE1CB67A0200564C78 /* Models */,
 				E2128AE81CB69AA600564C78 /* Services */,
@@ -374,13 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2128ADB1CB676FE00564C78 /* MoviePickerViewController.m in Sources */,
+				E2128B531CB7D69C00564C78 /* AppAssembly.m in Sources */,
 				E2128ADD1CB676FE00564C78 /* HeroSelectorViewController.m in Sources */,
 				E2128AE11CB67A1F00564C78 /* Movie.m in Sources */,
 				E2128AEC1CB69AEA00564C78 /* ContentServiceImpl.m in Sources */,
 				E2128AE41CB67A3600564C78 /* MovieDetail.m in Sources */,
 				E2128AE71CB67A4500564C78 /* Hero.m in Sources */,
 				E2128AD81CB676FE00564C78 /* MovieDetailViewController.m in Sources */,
-				E212E0751CB531D700526074 /* AppAssembly.m in Sources */,
 				E212E0451CB4360B00526074 /* AppDelegate.m in Sources */,
 				E212E0421CB4360B00526074 /* main.m in Sources */,
 			);
@@ -502,8 +510,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E429FB3A9B0043DDB6957FE /* Pods-HeroSpin.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroSpin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = petusa.github.io.HeroSpin;
@@ -515,8 +525,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 359F28C46F935A739BF23144 /* Pods-HeroSpin.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroSpin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = petusa.github.io.HeroSpin;
