@@ -53,4 +53,10 @@
     return self;
 }
 
+- (NSString*) description
+{
+    return [NSString stringWithFormat:@"Movie:\n\tTitle=%@\n\tYear=%i\n\timdbID=%@\n\ttype=%@\n\tPoster=%@",
+            _Title, _Year, _imdbID, [Movie movieTypeNameFrom:_Type], _Poster];
+}
+
 @end

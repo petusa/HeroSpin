@@ -35,7 +35,7 @@
     return self;
 }
 
-- (NSString*)description
+- (NSString*) description
 {
     return [NSString stringWithFormat:@"Hero: name=%@, image path=%@, type=%@", _name, _imagePath, _type];
 }

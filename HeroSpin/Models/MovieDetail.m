@@ -45,4 +45,9 @@
     return self;
 }
 
+- (NSString*) description
+{
+    return [[super description] stringByAppendingString:[NSString stringWithFormat:@"\n\tPlot: %@", _Plot ]];
+}
+
 @end

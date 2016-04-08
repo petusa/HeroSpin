@@ -19,6 +19,6 @@
 
 - (id) initWithName:(NSString*)name imagePath:(NSString*)path creator:(NSString*)creator type:(NSString*)type;
 
-- (NSString*)description;
+- (NSString*) description;
 
 @end

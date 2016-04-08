@@ -34,4 +34,6 @@
 
 - (id) initWithData:(NSDictionary*) data;
 
+- (NSString*) description;
+
 @end
