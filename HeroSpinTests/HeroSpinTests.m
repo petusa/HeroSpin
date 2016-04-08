@@ -11,6 +11,9 @@
 #import "Hero.h"
 #import "Movie.h"
 #import "MovieDetail.h"
+#import "Typhoon.h"
+#import "ContentService.h"
+#import "AppAssembly.h"
 
 @interface HeroSpinTests : XCTestCase
 
@@ -30,7 +33,7 @@
 
 - (void)testModels {
     // testing Hero creation
-    Hero* Batman = [Hero withName:@"Batman" image:@"batman.jpg"];
+    Hero* Batman = [Hero withName:@"Batman" imagePath:@"batman.jpg" creator:@"Bob Kane, Bill Finger" type:@"Top heroes"];
     XCTAssert([Batman.name isEqualToString:@"Batman"], @"Could not create Hero instance with static class method.");
     
     // testing Movie class, with movie type converters
@@ -43,6 +46,39 @@
     MovieDetail* BatmanReturnsMovieWithDetail = [MovieDetail movieDetailWithData:@{ (@"Title"):@"Batman Returns", (@"Type"):@"movie", (@"Genre"):@"Action"}];
     XCTAssert([BatmanReturnsMovieWithDetail.Title isEqualToString:@"Batman Returns"], @"Could not create MovieDetail instance with static class method and calling super.");
     XCTAssert([BatmanReturnsMovieWithDetail.Genre isEqualToString:@"Action"], @"Could not create MovieDetail instance with static class method and calling super.");
+}
+
+- (void)testContentService {
+    // create content service
+    AppAssembly *assembly = [[AppAssembly new] activate];
+    id<ContentService> contentService = [assembly contentService];
+    XCTAssert(contentService);
+    
+    // obtain heroes
+    NSArray *heroes = [contentService fetchHeroes];
+    XCTAssert([heroes count] > 0, @"Could not obtain any heroes.");
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Expecting to get results from remote calls."];
+    Hero *firstHero = heroes[0];
+    [contentService fetchMoviesFor:firstHero onSuccess:^(NSArray *movies) {
+        NSLog(@"List of movies:%@", movies);
+        XCTAssert([movies count] > 0, @"Could not obtain any movies.");
+        [contentService fetchMovieDetailFor:movies[0] onSuccess:^(MovieDetail *movieDetail) {
+            NSLog(@"Detail of first movie:%@", [movieDetail description]);
+            XCTAssert(movieDetail.Plot && [movieDetail.Plot length] > 0, @"Could not obtain movie detail, plot.");
+            [expectation fulfill];
+        } onError:^(NSString *message) {
+            NSLog(@"Opps, our hero seems to offline today...(%@)", message);
+        }];
+    } onError:^(NSString *message) {
+        NSLog(@"Opps, our hero failed to do his work today...(%@)", message);
+    }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
 }
 
 - (void)testPerformanceExample {

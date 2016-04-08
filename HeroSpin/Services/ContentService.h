@@ -23,7 +23,7 @@ typedef void(^FetchMoviesErrorBlock)(NSString *message);
                onError:(FetchMoviesErrorBlock)errorBlock;
 
 - (void)fetchMovieDetailFor:(Movie*)movie
-                  onSuccess:(FetchMoviesErrorBlock)successBlock
+                  onSuccess:(FetchMovieDetailReceivedBlock)successBlock
                     onError:(FetchMoviesErrorBlock)errorBlock;
 
 @end
