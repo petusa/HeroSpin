@@ -12,6 +12,7 @@
 #import "MovieDetailViewController.h"
 #import "HeroSelectorViewController.h"
 #import "ContentServiceImpl.h"
+#import "Typhoon.h"
 
 @implementation AppAssembly
 
@@ -51,8 +52,14 @@
 - (id<ContentService>)contentService
 {
     return [TyphoonDefinition withClass:[ContentServiceImpl class] configuration:^(TyphoonDefinition *definition) {
+        [definition injectProperty:@selector(serviceUrl) with:TyphoonConfig(@"service.url")];
         definition.scope = TyphoonScopeSingleton;
     }];
+}
+
+- (id)config
+{
+    return [TyphoonDefinition withConfigName:@"Configuration.plist"];
 }
 
 @end

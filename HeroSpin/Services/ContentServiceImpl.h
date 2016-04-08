@@ -13,4 +13,6 @@
 
 @interface ContentServiceImpl :  NSObject<ContentService>
 
+@property(nonatomic, strong) NSURL* serviceUrl;
+
 @end

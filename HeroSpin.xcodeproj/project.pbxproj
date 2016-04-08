@@ -21,6 +21,7 @@
 		E2128B471CB6DF9900564C78 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = E2128B451CB6DF9900564C78 /* Images */; };
 		E2128B481CB6DF9900564C78 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E2128B461CB6DF9900564C78 /* heroes.json */; };
 		E2128B531CB7D69C00564C78 /* AppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = E2128B521CB7D69C00564C78 /* AppAssembly.m */; };
+		E2128B581CB7DE8400564C78 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2128B571CB7DE8400564C78 /* Configuration.plist */; };
 		E212E0421CB4360B00526074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0411CB4360B00526074 /* main.m */; };
 		E212E0451CB4360B00526074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0441CB4360B00526074 /* AppDelegate.m */; };
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		E2128B461CB6DF9900564C78 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		E2128B511CB7D69C00564C78 /* AppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAssembly.h; sourceTree = "<group>"; };
 		E2128B521CB7D69C00564C78 /* AppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAssembly.m; sourceTree = "<group>"; };
+		E2128B571CB7DE8400564C78 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		E212E03D1CB4360B00526074 /* HeroSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E0411CB4360B00526074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E212E0431CB4360B00526074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				E2128B511CB7D69C00564C78 /* AppAssembly.h */,
 				E2128B521CB7D69C00564C78 /* AppAssembly.m */,
+				E2128B571CB7DE8400564C78 /* Configuration.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */,
 				E2128AD91CB676FE00564C78 /* HeroSelectorViewController.xib in Resources */,
 				E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */,
+				E2128B581CB7DE8400564C78 /* Configuration.plist in Resources */,
 				E2128B471CB6DF9900564C78 /* Images in Resources */,
 				E2128ADC1CB676FE00564C78 /* MoviePickerViewController.xib in Resources */,
 			);
