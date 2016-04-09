@@ -9,6 +9,7 @@
 #import "MoviePickerViewController.h"
 #import "AppAssembly.h"
 #import "ContentService.h"
+#import "RootViewController.h"
 
 @interface MoviePickerViewController ()
 {
@@ -30,26 +31,27 @@
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+//-------------------------------------------------------------------------------------------
+#pragma mark - User interaction handling
+//-------------------------------------------------------------------------------------------
+
+- (IBAction)pickMovie:(id)sender
+{
+    NSLog(@"pickMovie clicked...");
+    [_assembly.rootViewController pushViewController:[_assembly movieDetailViewController]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)selectHero:(id)sender
+{
+    NSLog(@"selectHero clicked...");
+    [[_assembly rootViewController] toggleSideViewController];
 }
 
-- (IBAction)pickMovie:(id)selector {
-    // TODO make selection logic here
+- (IBAction)reset:(id)sender
+{
+    NSLog(@"reset clicked...");
     
-    // present movie detail, push it onto the 'navigation stack'
-    [self.navigationController pushViewController:[_assembly movieDetailViewController] animated:YES];
-}
-
-- (IBAction)selectHero:(id)selector {
-    // present hero selection screen, push it onto the 'navigation stack'
-    [self.navigationController pushViewController:[_assembly heroSelectorViewController] animated:YES];
 }
 
 @end

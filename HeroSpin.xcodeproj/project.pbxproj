@@ -29,6 +29,9 @@
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
 		E2A26D931CB9227200D51E91 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26D921CB9227200D51E91 /* RootViewController.m */; };
 		E2A26D961CB94F0200D51E91 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26D951CB94F0200D51E91 /* AppModel.m */; };
+		E2A26DA01CB9696100D51E91 /* Flash-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A26D9D1CB9696100D51E91 /* Flash-128.png */; };
+		E2A26DA11CB9696100D51E91 /* Flash-Reset.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A26D9E1CB9696100D51E91 /* Flash-Reset.png */; };
+		E2A26DA21CB9696100D51E91 /* Red-Cape.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A26D9F1CB9696100D51E91 /* Red-Cape.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		E2A26D921CB9227200D51E91 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E2A26D941CB94F0200D51E91 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		E2A26D951CB94F0200D51E91 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		E2A26D9D1CB9696100D51E91 /* Flash-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flash-128.png"; sourceTree = "<group>"; };
+		E2A26D9E1CB9696100D51E91 /* Flash-Reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flash-Reset.png"; sourceTree = "<group>"; };
+		E2A26D9F1CB9696100D51E91 /* Red-Cape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red-Cape.png"; sourceTree = "<group>"; };
 		F3D69D8D0BE377B5EFFE239C /* Pods-HeroSpinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpinTests/Pods-HeroSpinTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,9 @@
 		E2128B3C1CB6D5A000564C78 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2A26D9D1CB9696100D51E91 /* Flash-128.png */,
+				E2A26D9E1CB9696100D51E91 /* Flash-Reset.png */,
+				E2A26D9F1CB9696100D51E91 /* Red-Cape.png */,
 				E2128B451CB6DF9900564C78 /* Images */,
 			);
 			path = Resources;
@@ -330,12 +339,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A26DA21CB9696100D51E91 /* Red-Cape.png in Resources */,
 				E2128ADA1CB676FE00564C78 /* MovieDetailViewController.xib in Resources */,
 				E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */,
 				E2128AD91CB676FE00564C78 /* HeroSelectorViewController.xib in Resources */,
 				E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */,
 				E2128B581CB7DE8400564C78 /* Configuration.plist in Resources */,
 				E2128B471CB6DF9900564C78 /* Images in Resources */,
+				E2A26DA11CB9696100D51E91 /* Flash-Reset.png in Resources */,
+				E2A26DA01CB9696100D51E91 /* Flash-128.png in Resources */,
 				E2128ADC1CB676FE00564C78 /* MoviePickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

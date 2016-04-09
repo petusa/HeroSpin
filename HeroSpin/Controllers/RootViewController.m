@@ -38,8 +38,6 @@
         if (mainContentViewController) {
             [self pushViewController:mainContentViewController replaceRoot:YES];
         }
-        // TODO remove this below line - temorarily showing sideviewcontroller at init, while implementing heroselector
-        [self toggleSideViewController];
     }
     return self;
 }

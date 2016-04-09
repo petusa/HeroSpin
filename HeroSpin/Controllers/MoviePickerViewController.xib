@@ -1,77 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviePickerViewController">
             <connections>
+                <outlet property="heroSelectorButton" destination="aJi-Dy-2T7" id="o6q-4R-Kqx"/>
+                <outlet property="heroSpinButton" destination="7nf-5U-TFT" id="g3I-dA-WoN"/>
+                <outlet property="resetButton" destination="elS-KK-lYw" id="WLt-IJ-RZa"/>
+                <outlet property="selectedHeroImage" destination="5gq-5b-0AH" id="1ar-qf-HU6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kFq-5Z-9S2"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleAspectFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let your daily hero entertain you." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBV-Up-MHG">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="75" y="206" width="251" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeroSpin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlA-bz-mcb">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="165" y="147" width="71" height="21"/>
-                    </variation>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRN-sy-dIJ">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Pick me a movie"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="144" y="285" width="111" height="30"/>
-                    </variation>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-5U-TFT" customClass="Custom">
+                    <rect key="frame" x="90" y="176" width="128" height="128"/>
+                    <state key="normal" backgroundImage="Flash-128.png"/>
                     <connections>
-                        <action selector="pickMovie:" destination="-1" eventType="touchUpInside" id="jw7-ML-xYy"/>
+                        <action selector="pickMovie:" destination="-1" eventType="touchUpInside" id="Kgb-8M-Keq"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJi-Dy-2T7">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Let me select my hero, first"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="107" y="401" width="187" height="30"/>
-                    </variation>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-5b-0AH">
+                    <rect key="frame" x="0.0" y="26" width="320" height="213"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elS-KK-lYw" userLabel="Reset">
+                    <rect key="frame" x="247" y="402" width="63" height="60.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60.5" id="SLl-rO-MZv"/>
+                        <constraint firstAttribute="width" constant="63" id="bOq-UR-nw6"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="Flash-Reset.png"/>
                     <connections>
-                        <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="a1Z-mx-Pca"/>
+                        <action selector="reset:" destination="-1" eventType="touchUpInside" id="ghs-ZP-UMS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJi-Dy-2T7">
+                    <rect key="frame" x="8" y="396" width="64" height="73"/>
+                    <state key="normal" image="Red-Cape.png"/>
+                    <connections>
+                        <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="FH2-tx-mMJ"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="sBV-Up-MHG"/>
-                    <exclude reference="SlA-bz-mcb"/>
-                    <exclude reference="xRN-sy-dIJ"/>
-                    <exclude reference="aJi-Dy-2T7"/>
-                </mask>
-            </variation>
-            <variation key="widthClass=compact">
-                <mask key="subviews">
-                    <include reference="sBV-Up-MHG"/>
-                    <include reference="SlA-bz-mcb"/>
-                    <include reference="xRN-sy-dIJ"/>
-                    <include reference="aJi-Dy-2T7"/>
-                </mask>
-            </variation>
-            <point key="canvasLocation" x="457" y="459"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="elS-KK-lYw" secondAttribute="bottom" constant="17.5" id="3mb-bV-hMs"/>
+                <constraint firstItem="aJi-Dy-2T7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="HMu-Bh-pQG"/>
+                <constraint firstAttribute="bottom" secondItem="aJi-Dy-2T7" secondAttribute="bottom" constant="11" id="dF2-xf-UTu"/>
+                <constraint firstItem="elS-KK-lYw" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" constant="-2" id="gtK-hq-fCq"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="442" y="469"/>
         </view>
     </objects>
+    <resources>
+        <image name="Flash-128.png" width="128" height="128"/>
+        <image name="Flash-Reset.png" width="72" height="76"/>
+        <image name="Red-Cape.png" width="64" height="73"/>
+    </resources>
 </document>

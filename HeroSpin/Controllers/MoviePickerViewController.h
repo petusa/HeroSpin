@@ -12,6 +12,11 @@
 
 @interface MoviePickerViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UIButton *heroSpinButton;
+@property (nonatomic, strong) IBOutlet UIButton *heroSelectorButton;
+@property (nonatomic, strong) IBOutlet UIButton *resetButton;
+@property (nonatomic, strong) IBOutlet UIImageView *selectedHeroImage;
+
 - (instancetype)initWithAssembly:(AppAssembly *)assembly;
 
 @end
