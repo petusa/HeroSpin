@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define RANDOM_HERO_NAME @"HeroSpin"
+
 @interface Hero : NSObject
 
 @property (nonatomic, strong, readonly) NSString *name;

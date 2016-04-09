@@ -19,7 +19,7 @@
 
 @implementation ContentServiceImpl
 
-NSString *const CHRACTERS_PREFIX = @"characters_";
+NSString *const CHARACTERS_PREFIX = @"characters_";
 
 // TODO make it more robust, add error handling, implement UTs
 - (NSArray *)fetchHeroes
@@ -31,11 +31,11 @@ NSString *const CHRACTERS_PREFIX = @"characters_";
     NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:imagesPath error:&error];
     for (int i=0; i<[directoryContents count]; i++) {
         NSString *folderName = [directoryContents objectAtIndex:i];
-        if ([folderName hasPrefix:CHRACTERS_PREFIX]) {
+        if ([folderName hasPrefix:CHARACTERS_PREFIX]) {
             NSArray *parts = [folderName componentsSeparatedByString:@"_"];
             if ([parts count] > 2) {
                 NSString* heroCreator = [parts objectAtIndex:1];
-                NSString* heroType = [folderName substringFromIndex:([CHRACTERS_PREFIX length] + [heroCreator length] + 1)];
+                NSString* heroType = [folderName substringFromIndex:([CHARACTERS_PREFIX length] + [heroCreator length] + 1)];
                 NSString* heroImagesPath = [imagesPath stringByAppendingPathComponent:folderName];
                 NSArray * heroImages = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:heroImagesPath error:&error];
                 for (int h=0; h < [heroImages count]; h++) {

@@ -49,9 +49,14 @@
 - (IBAction)pickMovie:(id)sender
 {
     NSLog(@"pickMovie clicked...");
-    [_assembly.rootViewController pushViewController:[_assembly movieDetailViewController]];
+    if (_uiState == MoviePickerUIStateInitial) {
+        // find hero first
+        [self runSelectHeroLogic];
+    } else {
+        // search for movie
+        [self runSelectMovieLogic];
+    }
 }
-
 
 - (IBAction)selectHero:(id)sender
 {
@@ -64,6 +69,31 @@
     NSLog(@"reset");
     _appModel.SelectedHero = nil;
     [self checkOrUpdateStateAndUI];
+}
+
+//-------------------------------------------------------------------------------------------
+#pragma mark - Business logic
+//-------------------------------------------------------------------------------------------
+
+- (void)runSelectHeroLogic
+{
+    NSArray *heroes = [_contentService fetchHeroes];
+    // TODO we should not know about how heroes and default/random hero are stored, here
+    // maybe we should send it to contentService fetchRandomHero method
+    NSInteger selectedHeroIndex = (arc4random() % ([heroes count]-1)) + 1;
+    _appModel.SelectedHero = heroes[selectedHeroIndex];
+    [self checkOrUpdateStateAndUI];
+}
+
+- (void)runSelectMovieLogic
+{
+    if (!_appModel.SelectedHero) {
+        NSLog(@"Something wrong in app logic");
+        return;
+    }
+    // _contentService fetchMoviesFor:_appModel onSuccess:<#^(NSArray *movies)successBlock#> onError:<#^(NSString *message)errorBlock#>
+    //[_assembly.rootViewController pushViewController:[_assembly movieDetailViewController]];
+
 }
 
 //-------------------------------------------------------------------------------------------
