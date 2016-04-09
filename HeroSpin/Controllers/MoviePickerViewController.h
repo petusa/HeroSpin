@@ -10,6 +10,11 @@
 
 @class AppAssembly;
 
+typedef enum {
+    MoviePickerUIStateInitial,
+    MoviePickerUIStateHeroSelected
+} MoviePickerUIState;
+
 @interface MoviePickerViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UIButton *heroSpinButton;

@@ -20,16 +20,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-5U-TFT" customClass="Custom">
-                    <rect key="frame" x="90" y="176" width="128" height="128"/>
-                    <state key="normal" backgroundImage="Flash-128.png"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-5b-0AH">
+                    <rect key="frame" x="0.0" y="26" width="320" height="200"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJi-Dy-2T7">
+                    <rect key="frame" x="8" y="396" width="64" height="73"/>
+                    <state key="normal" image="Red-Cape.png"/>
                     <connections>
-                        <action selector="pickMovie:" destination="-1" eventType="touchUpInside" id="Kgb-8M-Keq"/>
+                        <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="FH2-tx-mMJ"/>
                     </connections>
                 </button>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-5b-0AH">
-                    <rect key="frame" x="0.0" y="26" width="320" height="213"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elS-KK-lYw" userLabel="Reset">
                     <rect key="frame" x="247" y="402" width="63" height="60.5"/>
                     <constraints>
@@ -41,11 +41,11 @@
                         <action selector="reset:" destination="-1" eventType="touchUpInside" id="ghs-ZP-UMS"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJi-Dy-2T7">
-                    <rect key="frame" x="8" y="396" width="64" height="73"/>
-                    <state key="normal" image="Red-Cape.png"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-5U-TFT">
+                    <rect key="frame" x="91" y="176" width="128" height="128"/>
+                    <state key="normal" backgroundImage="Flash-128.png"/>
                     <connections>
-                        <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="FH2-tx-mMJ"/>
+                        <action selector="pickMovie:" destination="-1" eventType="touchUpInside" id="Kgb-8M-Keq"/>
                     </connections>
                 </button>
             </subviews>

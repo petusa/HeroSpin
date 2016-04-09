@@ -43,6 +43,19 @@
     //your item views move off-screen
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    // find hero already selected, and make it visually selected
+    for (int h=0; h<[_heroes count]; h++) {
+        if ([((Hero*)_heroes[h]).name isEqualToString:_appModel.SelectedHero.name]){
+            _currentlySelectedIndex = h;
+            break;
+        }
+    }
+    [self makeHeroViewSelected:[_carousel itemViewAtIndex:_currentlySelectedIndex]];
+    [_carousel scrollToItemAtIndex:_currentlySelectedIndex animated:NO];
+}
 
 - (void)dealloc
 {
@@ -58,7 +71,8 @@
 #pragma mark - View lifecycle
 //-------------------------------------------------------------------------------------------
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // additional setup after loading the view from its nib.
     
@@ -177,7 +191,5 @@
     [heroView viewWithTag:1].backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
 
 }
-
-
 
 @end
