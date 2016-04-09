@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
 
-@interface HeroSelectorViewController : UIViewController
+@protocol ContentService;
+
+@interface HeroSelectorViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
+
+@property (nonatomic, strong) IBOutlet iCarousel *carousel;
+
+- (instancetype)initWithContentService:(id<ContentService>)contentService;
 
 @end

@@ -1,4 +1,5 @@
 PODS:
+  - iCarousel (1.8.2)
   - NSURL+QueryDictionary (1.1.0)
   - OCHamcrest (5.2.0)
   - OCMockito (3.0.1):
@@ -9,6 +10,7 @@ PODS:
   - Typhoon/no-arc (3.4.5)
 
 DEPENDENCIES:
+  - iCarousel
   - NSURL+QueryDictionary
   - OCMockito
   - PaperFold (from `https://github.com/jasperblues/PaperFold-for-iOS.git`, tag `1.2-no-gesture-recognizers`)
@@ -25,6 +27,7 @@ CHECKOUT OPTIONS:
     :tag: 1.2-no-gesture-recognizers
 
 SPEC CHECKSUMS:
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   NSURL+QueryDictionary: dd0a5fec689a9b4780b6fa0e0225c01ca3ea653e
   OCHamcrest: 218dc4022a5e928a275771da70c5dbea9f859287
   OCMockito: 9eee3c61e42f7cb8aa015d66f8cc16849701d973
