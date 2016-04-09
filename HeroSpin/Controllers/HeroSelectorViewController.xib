@@ -7,47 +7,122 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroSelectorViewController">
             <connections>
+                <outlet property="carousel" destination="RcB-0m-blq" id="ls4-tG-JUt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your hero here..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoG-TK-QM8">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="S2h-c5-WfB">
+                    <rect key="frame" x="46" y="116" width="519" height="331"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which of the heroes you would like to be?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoG-TK-QM8">
+                    <rect key="frame" x="156" y="25" width="42" height="21"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="111" y="169" width="178" height="21"/>
-                    </variation>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afz-Ej-ArG">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Pick the movie"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="150" y="424" width="100" height="30"/>
-                    </variation>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcB-0m-blq" userLabel="iCarousel" customClass="iCarousel">
+                    <rect key="frame" x="58" y="139" width="240" height="128"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
-                        <action selector="pickMovie:" destination="-1" eventType="touchUpInside" id="QTs-Xi-1XW"/>
+                        <outlet property="dataSource" destination="-1" id="1pj-bA-uzX"/>
+                        <outlet property="delegate" destination="-1" id="ggY-x0-zrl"/>
                     </connections>
-                </button>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AoG-TK-QM8" secondAttribute="trailing" constant="71" id="1bR-Gm-Fdb">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
+                <constraint firstItem="S2h-c5-WfB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="98R-zp-hSg"/>
+                <constraint firstItem="RcB-0m-blq" firstAttribute="centerX" secondItem="S2h-c5-WfB" secondAttribute="centerX" id="9i2-1q-fMh">
+                    <variation key="widthClass=compact" constant="-84.5"/>
+                </constraint>
+                <constraint firstItem="RcB-0m-blq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="DfH-dl-il7">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="AoG-TK-QM8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="Mi6-Ch-8fB">
+                    <variation key="widthClass=compact" constant="20"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="RcB-0m-blq" secondAttribute="bottom" constant="13" id="Sca-pY-Bq1">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="S2h-c5-WfB" secondAttribute="bottom" id="ao5-rj-jBG"/>
+                <constraint firstItem="AoG-TK-QM8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="cBG-Yh-okY">
+                    <variation key="widthClass=compact" constant="33"/>
+                </constraint>
+                <constraint firstItem="RcB-0m-blq" firstAttribute="centerX" secondItem="AoG-TK-QM8" secondAttribute="centerX" id="feA-pJ-IIP">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="RcB-0m-blq" firstAttribute="top" secondItem="AoG-TK-QM8" secondAttribute="bottom" constant="83" id="gUv-RN-VEu">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
+                <constraint firstItem="AoG-TK-QM8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="71" id="mFu-gR-ur7">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
+                <constraint firstItem="AoG-TK-QM8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="71" id="r4o-Hc-1x4">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
+                <constraint firstItem="S2h-c5-WfB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="s2l-tA-6tX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
+                    <exclude reference="S2h-c5-WfB"/>
                     <exclude reference="AoG-TK-QM8"/>
-                    <exclude reference="Afz-Ej-ArG"/>
+                    <exclude reference="RcB-0m-blq"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="98R-zp-hSg"/>
+                    <exclude reference="ao5-rj-jBG"/>
+                    <exclude reference="s2l-tA-6tX"/>
+                    <exclude reference="1bR-Gm-Fdb"/>
+                    <exclude reference="Mi6-Ch-8fB"/>
+                    <exclude reference="cBG-Yh-okY"/>
+                    <exclude reference="mFu-gR-ur7"/>
+                    <exclude reference="r4o-Hc-1x4"/>
+                    <exclude reference="9i2-1q-fMh"/>
+                    <exclude reference="DfH-dl-il7"/>
+                    <exclude reference="Sca-pY-Bq1"/>
+                    <exclude reference="feA-pJ-IIP"/>
+                    <exclude reference="gUv-RN-VEu"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
+                    <include reference="S2h-c5-WfB"/>
                     <include reference="AoG-TK-QM8"/>
-                    <include reference="Afz-Ej-ArG"/>
+                    <include reference="RcB-0m-blq"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="98R-zp-hSg"/>
+                    <include reference="ao5-rj-jBG"/>
+                    <include reference="s2l-tA-6tX"/>
+                    <include reference="1bR-Gm-Fdb"/>
+                    <include reference="Mi6-Ch-8fB"/>
+                    <exclude reference="cBG-Yh-okY"/>
+                    <include reference="mFu-gR-ur7"/>
+                    <include reference="r4o-Hc-1x4"/>
+                    <include reference="9i2-1q-fMh"/>
+                    <include reference="DfH-dl-il7"/>
+                    <include reference="Sca-pY-Bq1"/>
+                    <include reference="feA-pJ-IIP"/>
+                    <include reference="gUv-RN-VEu"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="438.5" y="389"/>
         </view>
     </objects>
+    <resources>
+        <image name="background.jpg" width="1920" height="529"/>
+    </resources>
 </document>

@@ -161,6 +161,9 @@
     [self makeHeroViewSelected:[carousel itemViewAtIndex:index]];
     // set current index
     _currentlySelectedIndex = index;
+    
+    // update application model
+    _appModel.SelectedHero = _heroes[_currentlySelectedIndex];
 }
 
 - (void)makeHeroViewSelected:(UIView *)heroView {
