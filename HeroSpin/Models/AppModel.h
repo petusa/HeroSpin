@@ -10,9 +10,11 @@
 
 @class Hero;
 @class Movie;
+@class MovieDetail;
 
 @interface AppModel : NSObject
 @property (nonatomic, strong) Hero *SelectedHero;
 @property (nonatomic, strong) Movie *SelectedMovie;
-@property (nonatomic, strong) NSArray *PickedMoviesHistory;
+@property (nonatomic, strong) MovieDetail *SelectedMovieDetail;
+@property (nonatomic, strong) NSMutableArray *PickedMoviesHistory;
 @end

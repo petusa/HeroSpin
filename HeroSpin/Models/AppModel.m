@@ -10,6 +10,17 @@
 #import "Hero.h"
 
 @implementation AppModel
+@synthesize PickedMoviesHistory = _PickedMoviesHistory;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _PickedMoviesHistory = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 
 // to make sure that the very first hero among the heroes does not count as a concrete hero
 - (void)setSelectedHero:(Hero*)hero {

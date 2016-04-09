@@ -21,6 +21,7 @@ typedef enum {
 @property (nonatomic, strong) IBOutlet UIButton *heroSelectorButton;
 @property (nonatomic, strong) IBOutlet UIButton *resetButton;
 @property (nonatomic, strong) IBOutlet UIImageView *selectedHeroImage;
+@property (nonatomic, strong) IBOutlet UIView *errorView;
 
 - (instancetype)initWithAssembly:(AppAssembly *)assembly;
 

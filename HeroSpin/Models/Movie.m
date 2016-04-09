@@ -48,7 +48,11 @@
         _Year = [[data objectForKey:@"Year"] intValue];
         _imdbID = [data objectForKey:@"imdbID"];
         _Type = [Movie movieTypeFrom:[data objectForKey:@"Type"]];
-        _Poster = [NSURL URLWithString:[data objectForKey:@"Poster"]];
+        if ([[data objectForKey:@"Poster"] isEqualToString:@"N/A"]){
+            _Poster = nil;
+        } else {
+            _Poster = [NSURL URLWithString:[data objectForKey:@"Poster"]];
+        }
     }
     return self;
 }

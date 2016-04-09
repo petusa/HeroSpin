@@ -13,6 +13,8 @@
 #import "RootViewController.h"
 #import "AppModel.h"
 #import "Hero.h"
+#import "Movie.h"
+#import "MovieDetail.h"
 #import "AnimationUtils.h"
 
 @interface MoviePickerViewController ()
@@ -68,6 +70,7 @@
 {
     NSLog(@"reset");
     _appModel.SelectedHero = nil;
+    self.errorView.hidden = YES; // in case the reset call comes from the error view
     [self checkOrUpdateStateAndUI];
 }
 
@@ -88,12 +91,43 @@
 - (void)runSelectMovieLogic
 {
     if (!_appModel.SelectedHero) {
-        NSLog(@"Something wrong in app logic");
+        NSLog(@"Something wrong in app logic, we should have a hero selected at this point.");
         return;
     }
-    // _contentService fetchMoviesFor:_appModel onSuccess:<#^(NSArray *movies)successBlock#> onError:<#^(NSString *message)errorBlock#>
-    //[_assembly.rootViewController pushViewController:[_assembly movieDetailViewController]];
+    [_contentService fetchMoviesFor:_appModel.SelectedHero onSuccess:^(NSArray *movies) {
+        // TODO find better remote service for finding movies
+        // we must filter the results as there are many non appropriate movies, mostly without Poster
+        // as based on WikiPedia, all Marvel movies are from 1986 and on, except for Captain America oldest version
+        // so we also filter from the year 1986
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"Poster != nil && Year > 1985" ];
+        NSArray *filteredMovies = [movies filteredArrayUsingPredicate:pred];
+        if ([filteredMovies count] == 0) {
+            // TODO handle this in lower level
+            [self handleBusinessError:@"No appropriate movie found for hero."];
+            return;
+        }
+        NSInteger selectedMovieIndex = arc4random() % [filteredMovies count];
+        _appModel.SelectedMovie = filteredMovies[selectedMovieIndex];
+        [_contentService fetchMovieDetailFor:_appModel.SelectedMovie onSuccess:^(MovieDetail *movieDetail) {
+            _appModel.SelectedMovieDetail = movieDetail;
+            [_appModel.PickedMoviesHistory addObject:movieDetail];
+            NSLog(@"picked movie: %@", [movieDetail description]);
+            [_assembly.rootViewController pushViewController:[_assembly movieDetailViewController]];
+        } onError:^(NSString *message) {
+            [self handleBusinessError:message];
+        }];
+    } onError:^(NSString *message) {
+        [self handleBusinessError:message];
+    }];
+}
 
+- (void)handleBusinessError:(NSString*)message
+{
+    NSLog(@"It seems our heroes are experiencing some difficulties while saving the world...(%@)", message);
+    self.errorView.hidden = NO;
+    // TODO make full screen error view:
+    // in case of COMMUNICATION_ERROR: Oops, it seems our heroes are offline today, check your phone's internet connection to reach them
+    // in other cases: Oops, something catastophe happend, our heroes are working on recovey, check it later
 }
 
 //-------------------------------------------------------------------------------------------
