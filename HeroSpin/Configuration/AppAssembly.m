@@ -8,6 +8,7 @@
 
 #import "AppAssembly.h"
 #import "AppDelegate.h"
+#import "RootViewController.h"
 #import "MoviePickerViewController.h"
 #import "MovieDetailViewController.h"
 #import "HeroSelectorViewController.h"
@@ -19,10 +20,22 @@
 - (AppDelegate*)appDelegate
 {
     return [TyphoonDefinition withClass:[AppDelegate class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(mainViewController) with:[self moviePickerViewController]];
+        [definition injectProperty:@selector(rootViewController) with:[self rootViewController]];
     }];
 }
 
+- (UIViewController*)rootViewController
+{
+    return [TyphoonDefinition withClass:[RootViewController class] configuration:^(TyphoonDefinition *definition) {
+        [definition useInitializer:@selector(initWithMainContentViewController:assembly:) parameters:^(TyphoonMethod *initializer)
+         {
+             [initializer injectParameterWith:self.moviePickerViewController];
+             [initializer injectParameterWith:self];
+         }];
+         definition.scope = TyphoonScopeSingleton;
+    }];
+}
+            
 - (UIViewController*)moviePickerViewController
 {
     return [TyphoonDefinition withClass:[MoviePickerViewController class] configuration:^(TyphoonDefinition *definition) {

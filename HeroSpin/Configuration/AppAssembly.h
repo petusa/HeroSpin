@@ -11,11 +11,14 @@
 
 @class AppDelegate;
 @class UIViewController;
+@class RootViewController;
 @protocol ContentService;
 
 @interface AppAssembly : TyphoonAssembly
 
 - (AppDelegate*)appDelegate;
+
+- (RootViewController*)rootViewController;
 
 - (UIViewController*)moviePickerViewController;
 

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "PaperFoldNavigationController.h"
+#import "MovieDetailViewController.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +23,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
-    navigationController.navigationBarHidden = YES;
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = self.rootViewController;
     return YES;
 }
 

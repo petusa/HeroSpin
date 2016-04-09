@@ -3,6 +3,7 @@ PODS:
   - OCHamcrest (5.2.0)
   - OCMockito (3.0.1):
     - OCHamcrest (~> 5.1)
+  - PaperFold (1.2)
   - Typhoon (3.4.5):
     - Typhoon/no-arc (= 3.4.5)
   - Typhoon/no-arc (3.4.5)
@@ -10,12 +11,24 @@ PODS:
 DEPENDENCIES:
   - NSURL+QueryDictionary
   - OCMockito
+  - PaperFold (from `https://github.com/jasperblues/PaperFold-for-iOS.git`, tag `1.2-no-gesture-recognizers`)
   - Typhoon
+
+EXTERNAL SOURCES:
+  PaperFold:
+    :git: https://github.com/jasperblues/PaperFold-for-iOS.git
+    :tag: 1.2-no-gesture-recognizers
+
+CHECKOUT OPTIONS:
+  PaperFold:
+    :git: https://github.com/jasperblues/PaperFold-for-iOS.git
+    :tag: 1.2-no-gesture-recognizers
 
 SPEC CHECKSUMS:
   NSURL+QueryDictionary: dd0a5fec689a9b4780b6fa0e0225c01ca3ea653e
   OCHamcrest: 218dc4022a5e928a275771da70c5dbea9f859287
   OCMockito: 9eee3c61e42f7cb8aa015d66f8cc16849701d973
+  PaperFold: 7ebdf11028012a3e0f3906bd455054369ff79e4a
   Typhoon: 200100687af3233ec5ed019064df3c9ffe350475
 
 COCOAPODS: 0.39.0

@@ -28,6 +28,7 @@
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
 		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
+		E2A26D931CB9227200D51E91 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26D921CB9227200D51E91 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		E212E05A1CB4360B00526074 /* HeroSpinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroSpinTests.m; sourceTree = "<group>"; };
 		E212E05C1CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A26D911CB9227200D51E91 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E2A26D921CB9227200D51E91 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F3D69D8D0BE377B5EFFE239C /* Pods-HeroSpinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpinTests/Pods-HeroSpinTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +128,8 @@
 		E2128ACE1CB6754300564C78 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E2A26D911CB9227200D51E91 /* RootViewController.h */,
+				E2A26D921CB9227200D51E91 /* RootViewController.m */,
 				E2128AD31CB676FE00564C78 /* MoviePickerViewController.h */,
 				E2128AD41CB676FE00564C78 /* MoviePickerViewController.m */,
 				E2128AD51CB676FE00564C78 /* MoviePickerViewController.xib */,
@@ -448,6 +453,7 @@
 				E2128AEC1CB69AEA00564C78 /* ContentServiceImpl.m in Sources */,
 				E2128AE41CB67A3600564C78 /* MovieDetail.m in Sources */,
 				E2128AE71CB67A4500564C78 /* Hero.m in Sources */,
+				E2A26D931CB9227200D51E91 /* RootViewController.m in Sources */,
 				E2128AD81CB676FE00564C78 /* MovieDetailViewController.m in Sources */,
 				E212E0451CB4360B00526074 /* AppDelegate.m in Sources */,
 				E212E0421CB4360B00526074 /* main.m in Sources */,
@@ -573,7 +579,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroSpin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = petusa.github.io.HeroSpin;
@@ -589,7 +595,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroSpin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = petusa.github.io.HeroSpin;
