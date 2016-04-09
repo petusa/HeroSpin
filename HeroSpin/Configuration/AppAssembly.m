@@ -13,6 +13,7 @@
 #import "MovieDetailViewController.h"
 #import "HeroSelectorViewController.h"
 #import "ContentServiceImpl.h"
+#import "AppModel.h"
 #import "Typhoon.h"
 
 @implementation AppAssembly
@@ -49,15 +50,22 @@
 
 - (UIViewController*)movieDetailViewController
 {
-    return [TyphoonDefinition withClass:[MovieDetailViewController class] configuration:^(TyphoonDefinition *definition) {}];
+    return [TyphoonDefinition withClass:[MovieDetailViewController class] configuration:^(TyphoonDefinition *definition) {
+       [definition useInitializer:@selector(initWithContentService:appModel:) parameters:^(TyphoonMethod *initializer)
+        {
+            [initializer injectParameterWith:[self contentService]];
+            [initializer injectParameterWith:[self appModel]];
+        }];
+    }];
 }
 
 - (UIViewController*)heroSelectorViewController
 {
     return [TyphoonDefinition withClass:[HeroSelectorViewController class] configuration:^(TyphoonDefinition *definition) {
-        [definition useInitializer:@selector(initWithContentService:) parameters:^(TyphoonMethod *initializer)
+        [definition useInitializer:@selector(initWithContentService:appModel:) parameters:^(TyphoonMethod *initializer)
          {
              [initializer injectParameterWith:[self contentService]];
+             [initializer injectParameterWith:[self appModel]];
          }];
     }];
 }
@@ -66,6 +74,13 @@
 {
     return [TyphoonDefinition withClass:[ContentServiceImpl class] configuration:^(TyphoonDefinition *definition) {
         [definition injectProperty:@selector(serviceUrl) with:TyphoonConfig(@"service.url")];
+        definition.scope = TyphoonScopeSingleton;
+    }];
+}
+
+- (AppModel*)appModel
+{
+    return [TyphoonDefinition withClass:[AppModel class] configuration:^(TyphoonDefinition *definition) {
         definition.scope = TyphoonScopeSingleton;
     }];
 }

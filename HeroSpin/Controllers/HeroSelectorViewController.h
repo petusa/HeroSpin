@@ -10,11 +10,12 @@
 #import "iCarousel.h"
 
 @protocol ContentService;
+@class AppModel;
 
 @interface HeroSelectorViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
 
 @property (nonatomic, strong) IBOutlet iCarousel *carousel;
 
-- (instancetype)initWithContentService:(id<ContentService>)contentService;
+- (instancetype)initWithContentService:(id<ContentService>)contentService appModel:(AppModel*)appModel;
 
 @end

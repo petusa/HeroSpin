@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ContentService;
+@class AppModel;
+
 @interface MovieDetailViewController : UIViewController
+
+- (instancetype)initWithContentService:(id<ContentService>)contentService appModel:(AppModel*)appModel;
 
 @end

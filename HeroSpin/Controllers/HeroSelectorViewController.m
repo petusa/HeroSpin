@@ -8,12 +8,13 @@
 
 #import "HeroSelectorViewController.h"
 #import "ContentService.h"
+#import "AppModel.h"
 #import "Hero.h"
-
 
 @interface HeroSelectorViewController ()
 {
     id<ContentService> _contentService;
+    AppModel *_appModel;
     NSArray *_heroes;
     long _currentlySelectedIndex;
 }
@@ -21,12 +22,13 @@
 
 @implementation HeroSelectorViewController
 
-- (instancetype)initWithContentService:(id<ContentService>)contentService
+- (instancetype)initWithContentService:(id<ContentService>)contentService appModel:(AppModel*)appModel
 {
     self = [super init];
     if (self)
     {
         _contentService = contentService;
+        _appModel = appModel;
         _heroes = [_contentService fetchHeroes];
     }
     return self;

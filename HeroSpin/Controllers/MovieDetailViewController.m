@@ -9,10 +9,24 @@
 #import "MovieDetailViewController.h"
 
 @interface MovieDetailViewController ()
-
+{
+    id<ContentService> _contentService;
+    AppModel *_appModel;
+}
 @end
 
 @implementation MovieDetailViewController
+
+- (instancetype)initWithContentService:(id<ContentService>)contentService appModel:(AppModel*)appModel
+{
+    self = [super init];
+    if (self)
+    {
+        _contentService = contentService;
+        _appModel = appModel;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

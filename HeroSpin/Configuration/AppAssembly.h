@@ -13,6 +13,7 @@
 @class UIViewController;
 @class RootViewController;
 @protocol ContentService;
+@class AppModel;
 
 @interface AppAssembly : TyphoonAssembly
 
@@ -27,5 +28,7 @@
 - (UIViewController*)heroSelectorViewController;
 
 - (id<ContentService>)contentService;
+
+- (AppModel*)appModel;
 
 @end

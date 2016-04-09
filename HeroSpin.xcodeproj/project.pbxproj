@@ -29,6 +29,7 @@
 		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
 		E2A26D931CB9227200D51E91 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26D921CB9227200D51E91 /* RootViewController.m */; };
+		E2A26D961CB94F0200D51E91 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26D951CB94F0200D51E91 /* AppModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		E2883BAF8230297585C0AD4C /* libPods-HeroSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A26D911CB9227200D51E91 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		E2A26D921CB9227200D51E91 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E2A26D941CB94F0200D51E91 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		E2A26D951CB94F0200D51E91 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		F3D69D8D0BE377B5EFFE239C /* Pods-HeroSpinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpinTests/Pods-HeroSpinTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +155,8 @@
 				E2128AE31CB67A3600564C78 /* MovieDetail.m */,
 				E2128AE51CB67A4500564C78 /* Hero.h */,
 				E2128AE61CB67A4500564C78 /* Hero.m */,
+				E2A26D941CB94F0200D51E91 /* AppModel.h */,
+				E2A26D951CB94F0200D51E91 /* AppModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				E2128AEC1CB69AEA00564C78 /* ContentServiceImpl.m in Sources */,
 				E2128AE41CB67A3600564C78 /* MovieDetail.m in Sources */,
 				E2128AE71CB67A4500564C78 /* Hero.m in Sources */,
+				E2A26D961CB94F0200D51E91 /* AppModel.m in Sources */,
 				E2A26D931CB9227200D51E91 /* RootViewController.m in Sources */,
 				E2128AD81CB676FE00564C78 /* MovieDetailViewController.m in Sources */,
 				E212E0451CB4360B00526074 /* AppDelegate.m in Sources */,
