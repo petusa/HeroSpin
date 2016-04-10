@@ -1,6 +1,8 @@
 # HeroSpin
 iOS mobile app for picking a random superhero movie to watch
 
+Look this [README in raw format](http://github.com/petusa/HeroSpin/raw/master/README.md) and a bigger screen to see through the ASCII jungle below ;) 
+
          :+'
        @....#
       `@....#...`
