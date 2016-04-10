@@ -7,6 +7,8 @@
 //
 
 #import "MovieDetailViewController.h"
+#import "AppModel.h"
+#import "MovieDetail.h"
 
 @interface MovieDetailViewController ()
 {
@@ -28,9 +30,34 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    MovieDetail *md = _appModel.SelectedMovieDetail;
+    self.PosterImageView.image = [self loadImagefrom:md.Poster];
+    self.TitleLabel.text = [NSString stringWithFormat:@"%@ (%d)", md.Title, md.Year];
+    self.PlotLabel.text = md.Plot;
+    self.Duration.text = md.Runtime;
+    self.ActorsLabel.text = md.Actors;
+}
+
+- (UIImage*)loadImagefrom:(NSURL *)url
+{
+    if (!url) {
+        // TODO add some default placeholder image here...
+        return nil;
+    }
+    // replace to HTTPS in case it was http
+    NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
+    components.scheme = @"https";
+    NSData *data = [NSData dataWithContentsOfURL:components.URL];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+    return img;
 }
 
 - (void)didReceiveMemoryWarning {

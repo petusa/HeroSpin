@@ -33,6 +33,8 @@
 		E2A26DA11CB9696100D51E91 /* Flash-Reset.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A26D9E1CB9696100D51E91 /* Flash-Reset.png */; };
 		E2A26DA21CB9696100D51E91 /* Red-Cape.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A26D9F1CB9696100D51E91 /* Red-Cape.png */; };
 		E2A26DA51CB96B0A00D51E91 /* AnimationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26DA41CB96B0A00D51E91 /* AnimationUtils.m */; };
+		E2A26DA81CB9D04E00D51E91 /* HeroSpin.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A26DA71CB9D04E00D51E91 /* HeroSpin.png */; };
+		E2A26DAA1CB9D3EE00D51E91 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2A26DA91CB9D3EE00D51E91 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		E2A26D9F1CB9696100D51E91 /* Red-Cape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red-Cape.png"; sourceTree = "<group>"; };
 		E2A26DA31CB96B0A00D51E91 /* AnimationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationUtils.h; sourceTree = "<group>"; };
 		E2A26DA41CB96B0A00D51E91 /* AnimationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationUtils.m; sourceTree = "<group>"; };
+		E2A26DA71CB9D04E00D51E91 /* HeroSpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HeroSpin.png; path = Images/characters_apetusa_anyhero/HeroSpin.png; sourceTree = "<group>"; };
+		E2A26DA91CB9D3EE00D51E91 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Images/background.jpg; sourceTree = "<group>"; };
 		F3D69D8D0BE377B5EFFE239C /* Pods-HeroSpinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpinTests/Pods-HeroSpinTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,8 @@
 				E2A26D9D1CB9696100D51E91 /* Flash-128.png */,
 				E2A26D9E1CB9696100D51E91 /* Flash-Reset.png */,
 				E2A26D9F1CB9696100D51E91 /* Red-Cape.png */,
+				E2A26DA71CB9D04E00D51E91 /* HeroSpin.png */,
+				E2A26DA91CB9D3EE00D51E91 /* background.jpg */,
 				E2128B451CB6DF9900564C78 /* Images */,
 			);
 			path = Resources;
@@ -352,6 +358,8 @@
 				E2128B581CB7DE8400564C78 /* Configuration.plist in Resources */,
 				E2128B471CB6DF9900564C78 /* Images in Resources */,
 				E2A26DA11CB9696100D51E91 /* Flash-Reset.png in Resources */,
+				E2A26DA81CB9D04E00D51E91 /* HeroSpin.png in Resources */,
+				E2A26DAA1CB9D3EE00D51E91 /* background.jpg in Resources */,
 				E2A26DA01CB9696100D51E91 /* Flash-128.png in Resources */,
 				E2128ADC1CB676FE00564C78 /* MoviePickerViewController.xib in Resources */,
 			);
