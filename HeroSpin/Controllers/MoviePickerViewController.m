@@ -30,6 +30,9 @@
 
 @implementation MoviePickerViewController
 
+NSString *const PULSE_ANIMATION = @"PULSE_ANIMATION";
+NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
+
 - (instancetype)initWithAssembly:(AppAssembly *)assembly
 {
     self = [super init];
@@ -68,10 +71,13 @@
 
 - (IBAction)reset:(id)sender
 {
-    NSLog(@"reset");
+    NSLog(@"reset clicked...");
     _appModel.SelectedHero = nil;
-    self.errorView.hidden = YES; // in case the reset call comes from the error view
     [self checkOrUpdateStateAndUI];
+    // in case the reset call comes from the error view
+    self.errorView.hidden = YES;
+    [AnimationUtils pause:PULSE_ANIMATION];
+    [AnimationUtils pause:RADAR_SIGNAL_ANIMATION];
 }
 
 //-------------------------------------------------------------------------------------------
@@ -94,6 +100,8 @@
         NSLog(@"Something wrong in app logic, we should have a hero selected at this point.");
         return;
     }
+    [AnimationUtils start:PULSE_ANIMATION];
+    [AnimationUtils start:RADAR_SIGNAL_ANIMATION];
     [_contentService fetchMoviesFor:_appModel.SelectedHero onSuccess:^(NSArray *movies) {
         // TODO find better remote service for finding movies
         // we must filter the results as there are many non appropriate movies, mostly without Poster
@@ -112,6 +120,8 @@
             _appModel.SelectedMovieDetail = movieDetail;
             [_appModel.PickedMoviesHistory addObject:movieDetail];
             NSLog(@"picked movie: %@", [movieDetail description]);
+//            [AnimationUtils pause:PULSE_ANIMATION];
+//            [AnimationUtils pause:RADAR_SIGNAL_ANIMATION];
             [_assembly.rootViewController pushViewController:[_assembly movieDetailViewController]];
         } onError:^(NSString *message) {
             [self handleBusinessError:message];
@@ -142,12 +152,10 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"view DId Load.... MoviePicker...");
-    
     [super viewDidLoad];
+    NSLog(@"viewDidLoad");
     _heroSpinButtonOriginalPosition = _heroSpinButton.layer.position;
     _selectedHeroImageOriginalPosition  = _selectedHeroImage.layer.position;
-    NSLog(@"viewDidLoad");
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -155,6 +163,7 @@
     [super viewWillAppear:animated];
     NSLog(@"viewWillAppear");
     [self checkOrUpdateStateAndUI];
+    [self prepareHeroSpinButton]; // prepare animation nicely working
 }
 
 - (void)didReceiveMemoryWarning {
@@ -192,13 +201,16 @@
 - (void)initialState
 {
     _selectedHeroImage.layer.position = _selectedHeroImageOriginalPosition;
-
     _selectedHeroImage.hidden = YES;
     
     _heroSpinButton.layer.position = _heroSpinButtonOriginalPosition;
-    [self prepareHeroSpinButton];
+    _heroSpinButton.center = self.view.center;
     
     _resetButton.hidden = YES;
+    _errorView.hidden = YES;
+    
+    [AnimationUtils reset:PULSE_ANIMATION];
+    [AnimationUtils reset:RADAR_SIGNAL_ANIMATION];
 }
 
 
@@ -211,14 +223,16 @@
     [AnimationUtils changeLayerPositionWithAnimation:_selectedHeroImage.layer verticalYDelta:_selectedHeroImage.bounds.size.height];
     
     _resetButton.hidden = NO;
-    
 }
 
 
 - (void)prepareHeroSpinButton
 {
-    UIButton *_button = _heroSpinButton;
-    _button.translatesAutoresizingMaskIntoConstraints = YES;
+    _heroSpinButton.translatesAutoresizingMaskIntoConstraints = YES; // to make translate work properly, disable auto layout
+    [AnimationUtils addPulseAnimation:_heroSpinButton.imageView.layer withId:PULSE_ANIMATION];
+    [AnimationUtils addRadarSignalAnimation:_heroSpinButton withId:RADAR_SIGNAL_ANIMATION];
+    [AnimationUtils reset:PULSE_ANIMATION];
+    [AnimationUtils reset:RADAR_SIGNAL_ANIMATION];
 }
 
 @end

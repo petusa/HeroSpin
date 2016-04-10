@@ -10,12 +10,20 @@
 
 @implementation AnimationUtils
 
+static NSMutableDictionary *ANIMATIONS;
+
++ (void)initialize
+{
+    [super initialize];
+    ANIMATIONS = [[NSMutableDictionary alloc] init];
+}
+
 + (void)changeLayerPositionWithAnimation:(CALayer*)layer verticalYDelta:(float)yDelta
 {
-    // Save the original value
+    // save the original value
     CGFloat originalY = layer.position.y;
     
-    // Change the model value
+    // change the model value
     layer.position = CGPointMake(layer.position.x, layer.position.y + yDelta);
     
     CABasicAnimation* translationAnimation = [CABasicAnimation animationWithKeyPath:@"position.y"]; // transform.translation
@@ -28,6 +36,94 @@
     translationAnimation.removedOnCompletion = YES;
     translationAnimation.fillMode = kCAFillModeForwards;
     [layer addAnimation:translationAnimation forKey:@"p"];
+}
+
++ (void)addPulseAnimation:(CALayer*)layer withId:(NSString*)animationId
+{
+    // clear animations
+    [layer removeAllAnimations];
+    
+    // add animations
+    CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    pulseAnimation.duration = .5;
+    pulseAnimation.toValue = [NSNumber numberWithFloat:1.1];
+    pulseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pulseAnimation.autoreverses = YES;
+    pulseAnimation.repeatCount = MAXFLOAT;
+    [layer addAnimation:pulseAnimation forKey:@"a"];
+    [ANIMATIONS setValue:layer forKey:animationId];
+}
+
++ (void)addRadarSignalAnimation:(UIView*)uiView withId:(NSString*)animationId
+{
+    // create radar frame
+    UIView *radarFrame = [uiView viewWithTag:1];
+    if (!radarFrame) {
+        radarFrame = [[UIView alloc] initWithFrame:uiView.bounds];
+        radarFrame.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
+        radarFrame.userInteractionEnabled = NO;
+        radarFrame.layer.cornerRadius = 64;
+        radarFrame.tag = 1;
+        [uiView addSubview:radarFrame];
+        [uiView sendSubviewToBack:radarFrame];
+    }
+    // clear animations
+    [radarFrame.layer removeAllAnimations];
+    
+    // add animations
+    CABasicAnimation *fade = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fade.toValue = @0;
+    CABasicAnimation *pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    pulse.toValue = @2;
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.animations = @[fade,pulse];
+    group.duration = 1;
+    group.repeatCount = MAXFLOAT;
+    [radarFrame.layer addAnimation:group forKey:@"g"];
+    [ANIMATIONS setObject:radarFrame.layer forKey:animationId];
+}
+
++(void)start:(NSString*)_animationId
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        CALayer *layer = (CALayer*)[ANIMATIONS objectForKey:_animationId];
+        layer.timeOffset = 0;
+        layer.beginTime = 0.0;
+        layer.speed = 1.0;
+    });
+}
+
++(void)reset:(NSString*)_animationId
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        CALayer *layer = (CALayer*)[ANIMATIONS objectForKey:_animationId];
+        layer.speed = 0.0;
+        layer.timeOffset = 0;
+        layer.beginTime = 0.0;
+    });
+}
+
++(void)pause:(NSString*)_animationId
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        CALayer *layer = (CALayer*)[ANIMATIONS objectForKey:_animationId];
+        CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+        layer.speed = 0.0;
+        layer.timeOffset = pausedTime;
+    });
+}
+
++(void)resume:(NSString*)_animationId
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        CALayer *layer = (CALayer*)[ANIMATIONS objectForKey:_animationId];
+        CFTimeInterval pausedTime = [layer timeOffset];
+        layer.speed = 1.0;
+        layer.timeOffset = 0.0;
+        layer.beginTime = 0.0;
+        CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+        layer.beginTime = timeSincePause;
+    });
 }
 
 @end

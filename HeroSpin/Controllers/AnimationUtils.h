@@ -13,4 +13,16 @@
 
 + (void)changeLayerPositionWithAnimation:(CALayer*)layer verticalYDelta:(float)yDelta;
 
++ (void)addPulseAnimation:(CALayer*)layer withId:(NSString*)animationId;
+
++ (void)addRadarSignalAnimation:(UIView*)uiView withId:(NSString*)animationId;
+
++ (void)start:(NSString*)animationId;
+
++ (void)reset:(NSString*)animationId;
+
++ (void)pause:(NSString*)animationId;
+
++ (void)resume:(NSString*)animationId;
+
 @end

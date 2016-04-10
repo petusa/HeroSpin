@@ -42,9 +42,9 @@
                         <action selector="reset:" destination="-1" eventType="touchUpInside" id="ghs-ZP-UMS"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-5U-TFT">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-5U-TFT">
                     <rect key="frame" x="91" y="176" width="128" height="128"/>
-                    <state key="normal" backgroundImage="Flash-128.png"/>
+                    <state key="normal" image="Flash-128.png"/>
                     <connections>
                         <action selector="pickMovie:" destination="-1" eventType="touchUpInside" id="Kgb-8M-Keq"/>
                     </connections>
