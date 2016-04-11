@@ -25,7 +25,6 @@
 		E212E0421CB4360B00526074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0411CB4360B00526074 /* main.m */; };
 		E212E0451CB4360B00526074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E0441CB4360B00526074 /* AppDelegate.m */; };
 		E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E212E04C1CB4360B00526074 /* Assets.xcassets */; };
-		E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */; };
 		E212E05B1CB4360B00526074 /* HeroSpinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E212E05A1CB4360B00526074 /* HeroSpinTests.m */; };
 		E2A26D931CB9227200D51E91 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26D921CB9227200D51E91 /* RootViewController.m */; };
 		E2A26D961CB94F0200D51E91 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A26D951CB94F0200D51E91 /* AppModel.m */; };
@@ -37,6 +36,8 @@
 		E2A26DAA1CB9D3EE00D51E91 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2A26DA91CB9D3EE00D51E91 /* background.jpg */; };
 		E2A26DAC1CBB146E00D51E91 /* Back-Arrow-Right.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A26DAB1CBB146E00D51E91 /* Back-Arrow-Right.png */; };
 		E2A26DAE1CBB307A00D51E91 /* error_screen_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2A26DAD1CBB307A00D51E91 /* error_screen_background.jpg */; };
+		E2A26DB01CBB3B3200D51E91 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A26DAF1CBB3B3200D51E91 /* Launch Screen.storyboard */; };
+		E2A26DB21CBB3C5200D51E91 /* launch_screen_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2A26DB11CBB3C5200D51E91 /* launch_screen_background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +82,6 @@
 		E212E0431CB4360B00526074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E212E0441CB4360B00526074 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E212E04C1CB4360B00526074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E212E04F1CB4360B00526074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E212E0511CB4360B00526074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E212E0561CB4360B00526074 /* HeroSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E212E05A1CB4360B00526074 /* HeroSpinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroSpinTests.m; sourceTree = "<group>"; };
@@ -100,6 +100,8 @@
 		E2A26DA91CB9D3EE00D51E91 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Images/background.jpg; sourceTree = "<group>"; };
 		E2A26DAB1CBB146E00D51E91 /* Back-Arrow-Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-Arrow-Right.png"; sourceTree = "<group>"; };
 		E2A26DAD1CBB307A00D51E91 /* error_screen_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = error_screen_background.jpg; path = Images/error_screen_background.jpg; sourceTree = "<group>"; };
+		E2A26DAF1CBB3B3200D51E91 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E2A26DB11CBB3C5200D51E91 /* launch_screen_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = launch_screen_background.jpg; path = Images/launch_screen_background.jpg; sourceTree = "<group>"; };
 		F3D69D8D0BE377B5EFFE239C /* Pods-HeroSpinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroSpinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroSpinTests/Pods-HeroSpinTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 				E2A26DA71CB9D04E00D51E91 /* HeroSpin.png */,
 				E2A26DA91CB9D3EE00D51E91 /* background.jpg */,
 				E2A26DAD1CBB307A00D51E91 /* error_screen_background.jpg */,
+				E2A26DB11CBB3C5200D51E91 /* launch_screen_background.jpg */,
 				E2128B451CB6DF9900564C78 /* Images */,
 			);
 			path = Resources;
@@ -244,9 +247,9 @@
 				E2128AE81CB69AA600564C78 /* Services */,
 				E2128B3C1CB6D5A000564C78 /* Resources */,
 				E212E04C1CB4360B00526074 /* Assets.xcassets */,
-				E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */,
 				E212E0511CB4360B00526074 /* Info.plist */,
 				E212E0401CB4360B00526074 /* Supporting Files */,
+				E2A26DAF1CBB3B3200D51E91 /* Launch Screen.storyboard */,
 			);
 			path = HeroSpin;
 			sourceTree = "<group>";
@@ -358,11 +361,12 @@
 			files = (
 				E2A26DA21CB9696100D51E91 /* Red-Cape.png in Resources */,
 				E2128ADA1CB676FE00564C78 /* MovieDetailViewController.xib in Resources */,
-				E212E0501CB4360B00526074 /* LaunchScreen.storyboard in Resources */,
+				E2A26DB21CBB3C5200D51E91 /* launch_screen_background.jpg in Resources */,
 				E2128AD91CB676FE00564C78 /* HeroSelectorViewController.xib in Resources */,
 				E212E04D1CB4360B00526074 /* Assets.xcassets in Resources */,
 				E2128B581CB7DE8400564C78 /* Configuration.plist in Resources */,
 				E2A26DAE1CBB307A00D51E91 /* error_screen_background.jpg in Resources */,
+				E2A26DB01CBB3B3200D51E91 /* Launch Screen.storyboard in Resources */,
 				E2A26DAC1CBB146E00D51E91 /* Back-Arrow-Right.png in Resources */,
 				E2128B471CB6DF9900564C78 /* Images in Resources */,
 				E2A26DA11CB9696100D51E91 /* Flash-Reset.png in Resources */,
@@ -513,17 +517,6 @@
 			targetProxy = E212E0571CB4360B00526074 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E212E04E1CB4360B00526074 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E212E04F1CB4360B00526074 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E212E05D1CB4360B00526074 /* Debug */ = {
