@@ -128,7 +128,7 @@
         UIView *dummyView = [[UIView alloc] initWithFrame:CGRectMake(1, 1, 1, 1)];
         [(PaperFoldView *) self.view setLeftFoldContentView:dummyView foldCount:0 pullFactor:0];
         // TODO shall we always free it up?
-        _sideViewController = nil;
+        //_sideViewController = nil;
     }
 }
 

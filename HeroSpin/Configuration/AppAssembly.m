@@ -67,6 +67,7 @@
              [initializer injectParameterWith:[self contentService]];
              [initializer injectParameterWith:[self appModel]];
          }];
+        definition.scope = TyphoonScopeSingleton;
     }];
 }
 

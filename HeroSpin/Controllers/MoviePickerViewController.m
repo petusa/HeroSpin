@@ -25,6 +25,7 @@
     MoviePickerUIState _uiState;
     CGPoint _heroSpinButtonOriginalPosition;
     CGPoint _selectedHeroContainerOriginalPosition;
+    BOOL _firstLaunch;
 }
 @end
 
@@ -42,6 +43,7 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
         _contentService = assembly.contentService;
         _appModel = assembly.appModel;
         _uiState = MoviePickerUIStateInitial;
+        _firstLaunch = YES;
         
     }
     return self;
@@ -54,6 +56,9 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
 - (IBAction)pickMovie:(id)sender
 {
     NSLog(@"pickMovie clicked...");
+    _firstLaunch = NO;
+    _footerView.hidden = NO;
+    _startingHelperTextLabel.hidden = YES;
     if (_uiState == MoviePickerUIStateInitial) {
         // find hero first
         [self runSelectHeroLogic];
@@ -163,6 +168,9 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
     [self prepareButtonBorderFor:_resetButton withColor:[UIColor blackColor]];
     [self prepareButtonBorderFor:_closeHeroSelectorButton withColor:[UIColor blackColor]];
     [self prepareButtonBorderFor:_returnFromErrorButton withColor:[UIColor blackColor]];
+    
+    _footerView.hidden = YES;
+    _startingHelperTextLabel.hidden = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -171,6 +179,12 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
     NSLog(@"viewWillAppear");
     [self checkOrUpdateStateAndUI];
     [self prepareUIForAnimations]; // prepare animation nicely working
+    _footerView.hidden = NO;
+    _startingHelperTextLabel.hidden = YES;
+    if (_firstLaunch) {
+        _footerView.hidden = YES;
+        _startingHelperTextLabel.hidden = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

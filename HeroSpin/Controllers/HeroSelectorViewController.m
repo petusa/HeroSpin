@@ -53,8 +53,10 @@
             break;
         }
     }
-    [self makeHeroViewSelected:[_carousel itemViewAtIndex:_currentlySelectedIndex]];
-    [_carousel scrollToItemAtIndex:_currentlySelectedIndex animated:NO];
+    if (_currentlySelectedIndex!=0) {
+        [self makeHeroViewSelected:[_carousel itemViewAtIndex:_currentlySelectedIndex]];
+        [_carousel scrollToItemAtIndex:_currentlySelectedIndex animated:NO];
+    }
 }
 
 - (void)dealloc

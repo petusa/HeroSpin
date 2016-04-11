@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="closeHeroSelectorButton" destination="7OB-MT-Y9j" id="EkN-4a-eOu"/>
                 <outlet property="errorView" destination="akR-Mw-2Uw" id="9SU-UU-lBW"/>
+                <outlet property="footerView" destination="cu2-nI-4Y0" id="gcb-9I-6g0"/>
                 <outlet property="helperTextLabel" destination="X7b-9T-bqT" id="Q9J-fg-Mk4"/>
                 <outlet property="heroSelectorButton" destination="aJi-Dy-2T7" id="o6q-4R-Kqx"/>
                 <outlet property="heroSpinButton" destination="7nf-5U-TFT" id="g3I-dA-WoN"/>
@@ -18,6 +19,7 @@
                 <outlet property="selectedHeroContainer" destination="3BJ-pY-GwA" id="EwC-bv-yiV"/>
                 <outlet property="selectedHeroImage" destination="5gq-5b-0AH" id="1ar-qf-HU6"/>
                 <outlet property="selectedHeroLabel" destination="Aqb-Vx-cAx" id="Ss2-wB-Xtw"/>
+                <outlet property="startingHelperTextLabel" destination="Pfo-Nf-XYd" id="R0u-Xi-hFL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kFq-5Z-9S2"/>
             </connections>
         </placeholder>
@@ -53,43 +55,63 @@
                         <constraint firstItem="5gq-5b-0AH" firstAttribute="top" secondItem="3BJ-pY-GwA" secondAttribute="top" id="pRd-yC-7ua"/>
                     </constraints>
                 </view>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your entertainer arrived, touch again to see what they broguth to you today." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7b-9T-bqT" userLabel="Helper Text Label">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your entertainer arrived, touch again to see what they brought to you today." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7b-9T-bqT" userLabel="Helper Text Label">
                     <rect key="frame" x="8" y="266" width="304" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="As a good start, get your assistance. Simply touch the HERO Call button. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfo-Nf-XYd" userLabel="As a good start, get your assistance. Simply touch the HERO Call button.">
+                    <rect key="frame" x="8" y="26" width="301" height="50"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cu2-nI-4Y0" userLabel="Footer">
                     <rect key="frame" x="0.0" y="397" width="320" height="83"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-MT-Y9j" userLabel="Close Hero Selector Button">
+                            <rect key="frame" x="128" y="10" width="64" height="64"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="Back-Arrow-Right.png"/>
+                            <connections>
+                                <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="xUd-kg-RdC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elS-KK-lYw" userLabel="Reset Button">
+                            <rect key="frame" x="248" y="11" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="SLl-rO-MZv"/>
+                                <constraint firstAttribute="width" constant="64" id="bOq-UR-nw6"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" image="Flash-Reset.png"/>
+                            <connections>
+                                <action selector="reset:" destination="-1" eventType="touchUpInside" id="ghs-ZP-UMS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJi-Dy-2T7">
+                            <rect key="frame" x="8" y="11" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="Itn-ha-MAS"/>
+                                <constraint firstAttribute="height" constant="64" id="x6h-6Y-VT2"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="9" minY="9" maxX="11" maxY="11"/>
+                            <state key="normal" image="Red-Cape.png"/>
+                            <connections>
+                                <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="FH2-tx-mMJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" red="0.92156862750000001" green="0.90980392160000001" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="elS-KK-lYw" firstAttribute="bottom" secondItem="cu2-nI-4Y0" secondAttribute="bottomMargin" id="ERz-v1-XNO"/>
+                        <constraint firstItem="elS-KK-lYw" firstAttribute="trailing" secondItem="cu2-nI-4Y0" secondAttribute="trailingMargin" id="cGQ-bH-pw3"/>
+                        <constraint firstItem="elS-KK-lYw" firstAttribute="leading" secondItem="aJi-Dy-2T7" secondAttribute="trailing" constant="176" id="hfU-Uq-VAB"/>
+                        <constraint firstItem="aJi-Dy-2T7" firstAttribute="top" secondItem="elS-KK-lYw" secondAttribute="top" id="ko8-TN-STT"/>
                         <constraint firstAttribute="height" constant="83" id="rel-fa-sg0"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJi-Dy-2T7">
-                    <rect key="frame" x="8" y="408" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="64" id="Itn-ha-MAS"/>
-                        <constraint firstAttribute="height" constant="64" id="x6h-6Y-VT2"/>
-                    </constraints>
-                    <inset key="contentEdgeInsets" minX="9" minY="9" maxX="11" maxY="11"/>
-                    <state key="normal" image="Red-Cape.png"/>
-                    <connections>
-                        <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="FH2-tx-mMJ"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elS-KK-lYw" userLabel="Reset Button">
-                    <rect key="frame" x="248" y="408" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="SLl-rO-MZv"/>
-                        <constraint firstAttribute="width" constant="64" id="bOq-UR-nw6"/>
-                    </constraints>
-                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                    <state key="normal" image="Flash-Reset.png"/>
-                    <connections>
-                        <action selector="reset:" destination="-1" eventType="touchUpInside" id="ghs-ZP-UMS"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-5U-TFT" userLabel="HeroSpin Button">
                     <rect key="frame" x="91" y="176" width="128" height="128"/>
                     <state key="normal" image="Flash-128.png"/>
@@ -97,15 +119,7 @@
                         <action selector="pickMovie:" destination="-1" eventType="touchUpInside" id="Kgb-8M-Keq"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-MT-Y9j" userLabel="Close Hero Selector Button">
-                    <rect key="frame" x="8" y="325" width="64" height="64"/>
-                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                    <state key="normal" title="Button" image="Back-Arrow-Right.png"/>
-                    <connections>
-                        <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="xUd-kg-RdC"/>
-                    </connections>
-                </button>
-                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akR-Mw-2Uw" userLabel="Error view">
+                <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akR-Mw-2Uw" userLabel="Error view">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_screen_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bLN-4O-dpm">
@@ -167,15 +181,10 @@ Please check later.</string>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="aJi-Dy-2T7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="6QP-aQ-dT5"/>
-                <constraint firstAttribute="bottom" secondItem="aJi-Dy-2T7" secondAttribute="bottom" constant="8" id="6eb-fO-hrV"/>
                 <constraint firstAttribute="trailing" secondItem="X7b-9T-bqT" secondAttribute="trailing" constant="8" id="6vs-jT-AaC"/>
-                <constraint firstItem="elS-KK-lYw" firstAttribute="top" secondItem="aJi-Dy-2T7" secondAttribute="top" id="Bbj-mq-sKu"/>
                 <constraint firstItem="X7b-9T-bqT" firstAttribute="top" secondItem="3BJ-pY-GwA" secondAttribute="bottom" constant="8" id="Be2-79-gFc"/>
                 <constraint firstItem="akR-Mw-2Uw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BhC-Di-u1A"/>
                 <constraint firstItem="3BJ-pY-GwA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="Cck-H3-Cm9"/>
-                <constraint firstAttribute="trailing" secondItem="elS-KK-lYw" secondAttribute="trailing" constant="8" id="DSe-Vw-Akj"/>
-                <constraint firstItem="aJi-Dy-2T7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="FXa-on-1UC"/>
                 <constraint firstAttribute="bottom" secondItem="akR-Mw-2Uw" secondAttribute="bottom" id="OEF-Vr-m7G"/>
                 <constraint firstAttribute="trailing" secondItem="3BJ-pY-GwA" secondAttribute="trailing" id="UeI-fh-WHG"/>
                 <constraint firstItem="cu2-nI-4Y0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bH5-zU-pPe"/>
@@ -185,9 +194,6 @@ Please check later.</string>
                 <constraint firstItem="akR-Mw-2Uw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mTe-tR-0H3"/>
                 <constraint firstAttribute="trailing" secondItem="cu2-nI-4Y0" secondAttribute="trailing" id="pzZ-yt-jtl"/>
                 <constraint firstAttribute="trailing" secondItem="akR-Mw-2Uw" secondAttribute="trailing" id="rom-O7-Tff"/>
-                <constraint firstAttribute="bottom" secondItem="elS-KK-lYw" secondAttribute="bottom" constant="8" id="uuX-LR-mIJ"/>
-                <constraint firstItem="elS-KK-lYw" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="vSt-TZ-WA9"/>
-                <constraint firstItem="aJi-Dy-2T7" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="ymO-JN-Bij"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="442" y="469"/>
