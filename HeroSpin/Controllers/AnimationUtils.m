@@ -18,7 +18,7 @@ static NSMutableDictionary *ANIMATIONS;
     ANIMATIONS = [[NSMutableDictionary alloc] init];
 }
 
-+ (void)changeLayerPositionWithAnimation:(CALayer*)layer verticalYDelta:(float)yDelta
++ (void)changeLayerPositionWithAnimation:(CALayer*)layer verticalYDelta:(float)yDelta withCompletionBlock:(AnimationCompletedBLock)block
 {
     // save the original value
     CGFloat originalY = layer.position.y;
@@ -29,13 +29,22 @@ static NSMutableDictionary *ANIMATIONS;
     CABasicAnimation* translationAnimation = [CABasicAnimation animationWithKeyPath:@"position.y"]; // transform.translation
     // translationAnimation.toValue = [NSNumber numberWithFloat:yDelta];
     translationAnimation.fromValue = @(originalY);
-    translationAnimation.duration = 1;
+    translationAnimation.duration = 0.5;
     translationAnimation.cumulative = NO;
     translationAnimation.repeatCount = 1.0;
     translationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     translationAnimation.removedOnCompletion = YES;
     translationAnimation.fillMode = kCAFillModeForwards;
-    [layer addAnimation:translationAnimation forKey:@"p"];
+    
+    // add animation with completion block or without
+    if (block) {
+        [CATransaction begin]; {
+            [CATransaction setCompletionBlock:block];
+            [layer addAnimation:translationAnimation forKey:@"p"];
+        } [CATransaction commit];
+    } else {
+        [layer addAnimation:translationAnimation forKey:@"p"];
+    }
 }
 
 + (void)addPulseAnimation:(CALayer*)layer withId:(NSString*)animationId

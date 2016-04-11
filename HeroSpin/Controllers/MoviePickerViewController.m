@@ -24,7 +24,7 @@
     AppModel *_appModel;
     MoviePickerUIState _uiState;
     CGPoint _heroSpinButtonOriginalPosition;
-    CGPoint _selectedHeroImageOriginalPosition;
+    CGPoint _selectedHeroContainerOriginalPosition;
 }
 @end
 
@@ -66,6 +66,9 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
 - (IBAction)selectHero:(id)sender
 {
     NSLog(@"selectHero clicked...");
+    _closeHeroSelectorButton.center = _heroSelectorButton.center;
+    _closeHeroSelectorButton.hidden = _heroSelectorButton.hidden;
+    _heroSelectorButton.hidden = !_closeHeroSelectorButton.hidden;
     [[_assembly rootViewController] toggleSideViewController];
 }
 
@@ -155,7 +158,11 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
     [super viewDidLoad];
     NSLog(@"viewDidLoad");
     _heroSpinButtonOriginalPosition = _heroSpinButton.layer.position;
-    _selectedHeroImageOriginalPosition  = _selectedHeroImage.layer.position;
+    _selectedHeroContainerOriginalPosition  = _selectedHeroContainer.layer.position;
+    [self prepareButtonBorderFor:_heroSelectorButton withColor:[UIColor redColor]];
+    [self prepareButtonBorderFor:_resetButton withColor:[UIColor blackColor]];
+    [self prepareButtonBorderFor:_closeHeroSelectorButton withColor:[UIColor blackColor]];
+    [self prepareButtonBorderFor:_returnFromErrorButton withColor:[UIColor blackColor]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -163,7 +170,7 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
     [super viewWillAppear:animated];
     NSLog(@"viewWillAppear");
     [self checkOrUpdateStateAndUI];
-    [self prepareHeroSpinButton]; // prepare animation nicely working
+    [self prepareUIForAnimations]; // prepare animation nicely working
 }
 
 - (void)didReceiveMemoryWarning {
@@ -178,6 +185,7 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
         case MoviePickerUIStateInitial:
             if (_assembly.appModel.SelectedHero) {
                 _selectedHeroImage.image = [UIImage imageNamed:_appModel.SelectedHero.imagePath];
+                _selectedHeroLabel.text = _appModel.SelectedHero.name;
                 [self animateToMovieSelectionState];
                 _uiState = MoviePickerUIStateHeroSelected;
             } else {
@@ -187,6 +195,7 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
         case MoviePickerUIStateHeroSelected:
             if (_assembly.appModel.SelectedHero) {
                 self.selectedHeroImage.image = [UIImage imageNamed:_appModel.SelectedHero.imagePath];
+                _selectedHeroLabel.text = _appModel.SelectedHero.name;
             } else {
                 // reset clicked??
                 [self initialState];
@@ -200,39 +209,50 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
 
 - (void)initialState
 {
-    _selectedHeroImage.layer.position = _selectedHeroImageOriginalPosition;
-    _selectedHeroImage.hidden = YES;
+    _selectedHeroContainer.layer.position = _selectedHeroContainerOriginalPosition;
+    _selectedHeroContainer.hidden = YES;
     
     _heroSpinButton.layer.position = _heroSpinButtonOriginalPosition;
     _heroSpinButton.center = self.view.center;
     
     _resetButton.hidden = YES;
+    _helperTextLabel.hidden = YES;
     _errorView.hidden = YES;
     
     [AnimationUtils reset:PULSE_ANIMATION];
     [AnimationUtils reset:RADAR_SIGNAL_ANIMATION];
 }
 
-
 - (void)animateToMovieSelectionState
 {
-    [AnimationUtils changeLayerPositionWithAnimation:_heroSpinButton.layer verticalYDelta:140.0];
+    // animate button
+    [AnimationUtils changeLayerPositionWithAnimation:_heroSpinButton.layer verticalYDelta:120.0 withCompletionBlock:nil];
     
-    _selectedHeroImage.hidden = NO;
-    _selectedHeroImage.layer.position = CGPointMake(_selectedHeroImage.layer.position.x, _selectedHeroImageOriginalPosition.y - _selectedHeroImage.bounds.size.height);
-    [AnimationUtils changeLayerPositionWithAnimation:_selectedHeroImage.layer verticalYDelta:_selectedHeroImage.bounds.size.height];
-    
-    _resetButton.hidden = NO;
+    // animate container
+    _selectedHeroContainer.hidden = NO;
+    _selectedHeroContainer.layer.position = CGPointMake(_selectedHeroContainer.layer.position.x, _selectedHeroContainerOriginalPosition.y - _selectedHeroContainer.bounds.size.height);
+    [AnimationUtils changeLayerPositionWithAnimation:_selectedHeroContainer.layer verticalYDelta:_selectedHeroContainer.bounds.size.height withCompletionBlock:^{
+        _resetButton.hidden = NO;
+        _helperTextLabel.hidden = NO;
+    }];
 }
 
-
-- (void)prepareHeroSpinButton
+- (void)prepareUIForAnimations
 {
+    _selectedHeroContainer.translatesAutoresizingMaskIntoConstraints = YES;
     _heroSpinButton.translatesAutoresizingMaskIntoConstraints = YES; // to make translate work properly, disable auto layout
     [AnimationUtils addPulseAnimation:_heroSpinButton.imageView.layer withId:PULSE_ANIMATION];
     [AnimationUtils addRadarSignalAnimation:_heroSpinButton withId:RADAR_SIGNAL_ANIMATION];
     [AnimationUtils reset:PULSE_ANIMATION];
     [AnimationUtils reset:RADAR_SIGNAL_ANIMATION];
+}
+
+-(void)prepareButtonBorderFor:(UIButton*)button withColor:(UIColor*)color
+{
+    [button.layer setCornerRadius:button.bounds.size.width / 2.0];
+    [button.layer setBorderWidth:2.0f];
+    [button.layer setMasksToBounds:YES];
+    [button.layer setBorderColor:color.CGColor];
 }
 
 @end

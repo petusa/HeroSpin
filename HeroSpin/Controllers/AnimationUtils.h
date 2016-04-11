@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef void(^AnimationCompletedBLock)();
+
 @interface AnimationUtils : NSObject
 
-+ (void)changeLayerPositionWithAnimation:(CALayer*)layer verticalYDelta:(float)yDelta;
++ (void)changeLayerPositionWithAnimation:(CALayer*)layer verticalYDelta:(float)yDelta withCompletionBlock:(AnimationCompletedBLock)block;
 
 + (void)addPulseAnimation:(CALayer*)layer withId:(NSString*)animationId;
 
