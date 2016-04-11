@@ -105,10 +105,13 @@
                         <action selector="selectHero:" destination="-1" eventType="touchUpInside" id="xUd-kg-RdC"/>
                     </connections>
                 </button>
-                <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akR-Mw-2Uw" userLabel="Error view">
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akR-Mw-2Uw" userLabel="Error view">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjb-A1-hou">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_screen_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bLN-4O-dpm">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjb-A1-hou" userLabel="Error VIew Footer">
                             <rect key="frame" x="0.0" y="397" width="320" height="83"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zu7-5v-fn6" userLabel="Return From Error Button">
@@ -131,26 +134,31 @@
                                 <constraint firstItem="zu7-5v-fn6" firstAttribute="top" secondItem="pjb-A1-hou" secondAttribute="top" constant="11" id="tU9-M4-Eaj"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auv-bp-Ygh">
+                        <label userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auv-bp-Ygh">
                             <rect key="frame" x="8" y="191" width="304" height="97"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="97" id="Cwb-ik-oyd"/>
                             </constraints>
                             <string key="text">Itt seems our heroes are experiencing some difficulties while saving the world. 
 Please check later.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.85098039219999999" green="0.62745098040000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="bLN-4O-dpm" firstAttribute="top" secondItem="akR-Mw-2Uw" secondAttribute="top" id="2VF-3l-Yi7"/>
                         <constraint firstAttribute="trailing" secondItem="pjb-A1-hou" secondAttribute="trailing" id="4sq-hf-14E"/>
                         <constraint firstAttribute="bottom" secondItem="pjb-A1-hou" secondAttribute="bottom" id="7X0-wv-IDB"/>
                         <constraint firstItem="pjb-A1-hou" firstAttribute="leading" secondItem="akR-Mw-2Uw" secondAttribute="leading" id="AR6-8e-dd9"/>
+                        <constraint firstAttribute="trailing" secondItem="bLN-4O-dpm" secondAttribute="trailing" id="MBe-mN-rFx"/>
+                        <constraint firstAttribute="bottom" secondItem="bLN-4O-dpm" secondAttribute="bottom" id="QR0-yJ-cNg"/>
                         <constraint firstItem="auv-bp-Ygh" firstAttribute="leading" secondItem="akR-Mw-2Uw" secondAttribute="leadingMargin" id="V4c-jY-cYg"/>
                         <constraint firstItem="auv-bp-Ygh" firstAttribute="centerY" secondItem="akR-Mw-2Uw" secondAttribute="centerY" id="bA7-5h-kjd"/>
                         <constraint firstAttribute="bottom" secondItem="pjb-A1-hou" secondAttribute="bottom" id="cr8-4r-iSh"/>
+                        <constraint firstItem="bLN-4O-dpm" firstAttribute="leading" secondItem="akR-Mw-2Uw" secondAttribute="leading" id="mbV-X9-v2t"/>
                         <constraint firstItem="auv-bp-Ygh" firstAttribute="trailing" secondItem="akR-Mw-2Uw" secondAttribute="trailingMargin" id="pJ6-T1-lgG"/>
                         <constraint firstItem="pjb-A1-hou" firstAttribute="leading" secondItem="akR-Mw-2Uw" secondAttribute="leading" id="usG-C2-hkg"/>
                         <constraint firstAttribute="trailing" secondItem="pjb-A1-hou" secondAttribute="trailing" id="zga-l6-DzJ"/>
@@ -190,5 +198,6 @@ Please check later.</string>
         <image name="Flash-128.png" width="128" height="128"/>
         <image name="Flash-Reset.png" width="72" height="76"/>
         <image name="Red-Cape.png" width="56" height="64"/>
+        <image name="error_screen_background.jpg" width="960" height="540"/>
     </resources>
 </document>

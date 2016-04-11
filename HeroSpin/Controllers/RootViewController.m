@@ -88,7 +88,7 @@
         _sideViewState = SideViewStateShowing;
         // TODO shall we always recreated it?
         _sideViewController = [_assembly heroSelectorViewController];
-        CGRect sideFrameRect = CGRectMake(0, 20,
+        CGRect sideFrameRect = CGRectMake(0, 0,
                                       _mainContentViewContainer.frame.size.width - (_mainContentViewContainer.frame.size.width - SIDE_CONTROLLER_WIDTH), _mainContentViewContainer.frame.size.height);
         [_sideViewController.view setFrame:sideFrameRect];
         [self.view setDelegate:self];
