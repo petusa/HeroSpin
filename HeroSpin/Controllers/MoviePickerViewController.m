@@ -44,7 +44,6 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
         _appModel = assembly.appModel;
         _uiState = MoviePickerUIStateInitial;
         _firstLaunch = YES;
-        
     }
     return self;
 }
@@ -235,6 +234,11 @@ NSString *const RADAR_SIGNAL_ANIMATION = @"RADAR_SIGNAL_ANIMATION";
     
     [AnimationUtils reset:PULSE_ANIMATION];
     [AnimationUtils reset:RADAR_SIGNAL_ANIMATION];
+    
+    _startingHelperTextLabel.hidden = NO;
+    if (!_firstLaunch) {
+        _startingHelperTextLabel.text = @"You can anytime call a random hero, or 'spin' your favourite one.";
+    }
 }
 
 - (void)animateToMovieSelectionState

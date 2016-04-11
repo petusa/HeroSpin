@@ -55,7 +55,7 @@
                         <constraint firstItem="5gq-5b-0AH" firstAttribute="top" secondItem="3BJ-pY-GwA" secondAttribute="top" id="pRd-yC-7ua"/>
                     </constraints>
                 </view>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your entertainer arrived, touch again to see what they brought to you today." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7b-9T-bqT" userLabel="Helper Text Label">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your entertainer arrived, touch again to see what is brought to you today." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7b-9T-bqT" userLabel="Helper Text Label">
                     <rect key="frame" x="8" y="266" width="304" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

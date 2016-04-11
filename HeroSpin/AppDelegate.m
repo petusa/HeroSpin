@@ -25,7 +25,7 @@
     [self.window makeKeyAndVisible];
     self.window.rootViewController = self.rootViewController;
     // to show launch image a bit further
-    sleep(4);
+    sleep(2);
     return YES;
 }
 
