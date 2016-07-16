@@ -3,7 +3,7 @@ platform :ios, '6.1'
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
-target 'HeroSpin', :exclusive => true do
+target 'HeroSpin' do
 	pod 'Typhoon'
 	pod 'NSURL+QueryDictionary'
     pod 'iCarousel'
