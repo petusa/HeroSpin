@@ -154,7 +154,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="97" id="Cwb-ik-oyd"/>
                             </constraints>
-                            <string key="text">Itt seems our heroes are experiencing some difficulties while saving the world. 
+                            <string key="text">It seems our heroes are experiencing some difficulties while saving the world. 
 Please check later.</string>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
